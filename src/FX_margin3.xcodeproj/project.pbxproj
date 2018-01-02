@@ -8,21 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		0DD14083CF4D9549B78C03DB /* Pods_FX_margin3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59BF5A69BD437F88F9365AE /* Pods_FX_margin3.framework */; };
+		410FE4EA1FFB54CA008DB2AE /* AdModMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FE4E81FFB54CA008DB2AE /* AdModMgr.swift */; };
+		410FE4EB1FFB54CA008DB2AE /* AdModDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FE4E91FFB54CA008DB2AE /* AdModDef.swift */; };
+		410FE4F11FFB645A008DB2AE /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FE4F01FFB645A008DB2AE /* TopViewController.swift */; };
+		410FE4F21FFB74CD008DB2AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 410FE4EC1FFB59B2008DB2AE /* GoogleService-Info.plist */; };
 		418E18671FF663E400216CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E18661FF663E400216CCC /* AppDelegate.swift */; };
 		418E18691FF663E400216CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E18681FF663E400216CCC /* ViewController.swift */; };
 		418E186C1FF663E400216CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418E186A1FF663E400216CCC /* Main.storyboard */; };
 		418E186E1FF663E400216CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418E186D1FF663E400216CCC /* Assets.xcassets */; };
-		418E18711FF663E400216CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418E186F1FF663E400216CCC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DAA64179B4ADCFF09188E71 /* Pods-FX_margin3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FX_margin3.release.xcconfig"; path = "Pods/Target Support Files/Pods-FX_margin3/Pods-FX_margin3.release.xcconfig"; sourceTree = "<group>"; };
+		410FE4E81FFB54CA008DB2AE /* AdModMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdModMgr.swift; sourceTree = "<group>"; };
+		410FE4E91FFB54CA008DB2AE /* AdModDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdModDef.swift; sourceTree = "<group>"; };
+		410FE4EC1FFB59B2008DB2AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		410FE4F01FFB645A008DB2AE /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		418E18631FF663E300216CCC /* FX_margin3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FX_margin3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418E18661FF663E400216CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		418E18681FF663E400216CCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		418E186B1FF663E400216CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		418E186D1FF663E400216CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		418E18701FF663E400216CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		418E18721FF663E400216CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D2B301AA6A92F2028DA2DB1 /* Pods-FX_margin3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FX_margin3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FX_margin3/Pods-FX_margin3.debug.xcconfig"; sourceTree = "<group>"; };
 		B59BF5A69BD437F88F9365AE /* Pods_FX_margin3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FX_margin3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,11 +67,14 @@
 		418E18651FF663E400216CCC /* FX_margin3 */ = {
 			isa = PBXGroup;
 			children = (
+				410FE4E91FFB54CA008DB2AE /* AdModDef.swift */,
+				410FE4E81FFB54CA008DB2AE /* AdModMgr.swift */,
+				410FE4EC1FFB59B2008DB2AE /* GoogleService-Info.plist */,
 				418E18661FF663E400216CCC /* AppDelegate.swift */,
+				410FE4F01FFB645A008DB2AE /* TopViewController.swift */,
 				418E18681FF663E400216CCC /* ViewController.swift */,
 				418E186A1FF663E400216CCC /* Main.storyboard */,
 				418E186D1FF663E400216CCC /* Assets.xcassets */,
-				418E186F1FF663E400216CCC /* LaunchScreen.storyboard */,
 				418E18721FF663E400216CCC /* Info.plist */,
 			);
 			path = FX_margin3;
@@ -150,9 +159,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				418E18711FF663E400216CCC /* LaunchScreen.storyboard in Resources */,
 				418E186E1FF663E400216CCC /* Assets.xcassets in Resources */,
 				418E186C1FF663E400216CCC /* Main.storyboard in Resources */,
+				410FE4F21FFB74CD008DB2AE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410FE4F11FFB645A008DB2AE /* TopViewController.swift in Sources */,
 				418E18691FF663E400216CCC /* ViewController.swift in Sources */,
+				410FE4EB1FFB54CA008DB2AE /* AdModDef.swift in Sources */,
+				410FE4EA1FFB54CA008DB2AE /* AdModMgr.swift in Sources */,
 				418E18671FF663E400216CCC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,14 +237,6 @@
 				418E186B1FF663E400216CCC /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		418E186F1FF663E400216CCC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				418E18701FF663E400216CCC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -355,7 +359,7 @@
 				INFOPLIST_FILE = FX_margin3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xinext.FX-margin";
+				PRODUCT_BUNDLE_IDENTIFIER = xinext.FXmargin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,7 +376,7 @@
 				INFOPLIST_FILE = FX_margin3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xinext.FX-margin";
+				PRODUCT_BUNDLE_IDENTIFIER = xinext.FXmargin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
