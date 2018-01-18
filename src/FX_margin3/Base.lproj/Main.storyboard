@@ -6,7 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,6 +22,7 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEs-TJ-WGc" userLabel="MainContentsView">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="Ixc-78-IxO" kind="embed" id="TxX-QC-Zc0"/>
                                 </connections>
@@ -31,7 +34,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HU8-X9-X6H" firstAttribute="top" secondItem="oEs-TJ-WGc" secondAttribute="bottom" id="0uO-bt-VdB"/>
                             <constraint firstItem="HU8-X9-X6H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2g1-Yz-vcF"/>
@@ -53,37 +56,807 @@
             </objects>
             <point key="canvasLocation" x="-118.125" y="593.66197183098598"/>
         </scene>
-        <!--Item-->
+        <!--円-->
         <scene sceneID="pCD-Nj-aC7">
             <objects>
-                <viewController id="Ywn-OJ-Cg1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7oO-lI-ghZ">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ywn-OJ-Cg1" customClass="TabYenBasisViewController" customModule="FX_margin3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7oO-lI-ghZ" userLabel="TopView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.35772675279999999" green="0.62546676400000001" blue="0.40339839459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXA-3s-Awe" userLabel="MainContentsView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="479"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmC-y2-coy" userLabel="VCMCView">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="479"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" id="dcX-dK-5PX"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQ8-Bf-nfT" userLabel="InputAreaView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OF7-HH-tW0">
+                                                <rect key="frame" x="10" y="10" width="300" height="292"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HzP-Xb-m2k">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="44.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レート　　" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7N-JE-QX8" userLabel="RateTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="44.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123.567" borderStyle="roundedRect" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ha1-JC-ZcB" userLabel="RateValueTextField" customClass="YenRateValueTextField" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="44.5"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
+                                                                        <integer key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="DecimalPoint" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.17254901960784313" green="0.29411764705882354" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="o3O-tt-lpA" userLabel="RateUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="44.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="o3O-tt-lpA" firstAttribute="width" secondItem="g7N-JE-QX8" secondAttribute="width" multiplier="0.2" id="ENd-Fs-JdG"/>
+                                                            <constraint firstItem="Ha1-JC-ZcB" firstAttribute="width" secondItem="g7N-JE-QX8" secondAttribute="width" multiplier="1.65" id="XnN-YU-dmR"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hZS-fk-TFZ">
+                                                        <rect key="frame" x="0.0" y="49.5" width="300" height="44.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レバレッジ" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="PAS-pH-0dR" userLabel="LeverageTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="44.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="888" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="veH-9d-sdX" userLabel="LeverageValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="44.5"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
+                                                                        <integer key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="DecimalPoint">
+                                                                        <integer key="value" value="0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.17254901960784313" green="0.29411764705882354" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="倍" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="qbx-bD-f10" userLabel="LeverageUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="44.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="veH-9d-sdX" firstAttribute="width" secondItem="PAS-pH-0dR" secondAttribute="width" multiplier="1.65" id="F8l-2T-8qW"/>
+                                                            <constraint firstItem="qbx-bD-f10" firstAttribute="width" secondItem="PAS-pH-0dR" secondAttribute="width" multiplier="0.2" id="UNn-C8-DEl"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-as-0xq">
+                                                        <rect key="frame" x="0.0" y="99" width="300" height="44.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="S3z-fw-tVv" userLabel="LotsTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="98" height="44.5"/>
+                                                                <string key="text">建玉　　　
+(1万通貨)</string>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123.567" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="f6w-WH-9EY" userLabel="LotsValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="108" y="0.0" width="162.5" height="44.5"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
+                                                                        <integer key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="DecimalPoint">
+                                                                        <integer key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.17254901959999999" green="0.29411764709999999" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="枚" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="0OH-MC-PhZ" userLabel="LotsUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="44.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="0OH-MC-PhZ" firstAttribute="width" secondItem="S3z-fw-tVv" secondAttribute="width" multiplier="0.2" id="UNn-c2-NBE"/>
+                                                            <constraint firstItem="f6w-WH-9EY" firstAttribute="width" secondItem="S3z-fw-tVv" secondAttribute="width" multiplier="1.65" id="sSz-Xh-lPc"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S4O-aL-UUj">
+                                                        <rect key="frame" x="0.0" y="148.5" width="300" height="44.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="口座残高　" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Z38-bQ-Oex" userLabel="BalanceTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="44.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123.567" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="ipf-qh-jDf" userLabel="BalanceValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="44.5"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
+                                                                        <integer key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="DecimalPoint">
+                                                                        <integer key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.20784313725490194" green="0.42352941176470588" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="tfz-u2-a2O" userLabel="BalanceUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="44.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="tfz-u2-a2O" firstAttribute="width" secondItem="Z38-bQ-Oex" secondAttribute="width" multiplier="0.2" id="B1g-jS-GO0"/>
+                                                            <constraint firstItem="ipf-qh-jDf" firstAttribute="width" secondItem="Z38-bQ-Oex" secondAttribute="width" multiplier="1.65" id="SVx-iY-SSX"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PVn-eg-ddo">
+                                                        <rect key="frame" x="0.0" y="198" width="300" height="44.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="ofZ-lk-ygZ" userLabel="MarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="98" height="44.5"/>
+                                                                <string key="text">ロスカット
+維持率</string>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123.567" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="qpF-t7-G2N" userLabel="MarginValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="108" y="0.0" width="161.5" height="44.5"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
+                                                                        <integer key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="DecimalPoint">
+                                                                        <integer key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.20784313730000001" green="0.42352941179999998" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="％" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="5iG-tN-2AN" userLabel="MarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="279.5" y="0.0" width="20.5" height="44.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="5iG-tN-2AN" firstAttribute="width" secondItem="ofZ-lk-ygZ" secondAttribute="width" multiplier="0.2" id="8hU-4r-0nr"/>
+                                                            <constraint firstItem="qpF-t7-G2N" firstAttribute="width" secondItem="ofZ-lk-ygZ" secondAttribute="width" multiplier="1.65" id="Nve-F0-6fn"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UFo-gh-yqq">
+                                                        <rect key="frame" x="0.0" y="247.5" width="300" height="44.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="取引種別　" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Bmx-2N-suh" userLabel="TradeTypeTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="44.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123.567" borderStyle="roundedRect" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-NZ-VpE" userLabel="TradeTypeTextField" customClass="TradeTypePickerTextField" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="44.5"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
+                                                                        <integer key="value" value="7"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="DecimalPoint">
+                                                                        <integer key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.20784313730000001" green="0.42352941179999998" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="3"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eve-RB-FCg" userLabel="TradeTypeUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="44.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="eve-RB-FCg" firstAttribute="width" secondItem="Bmx-2N-suh" secondAttribute="width" multiplier="0.2" id="mbu-g5-ENg"/>
+                                                            <constraint firstItem="oEb-NZ-VpE" firstAttribute="width" secondItem="Bmx-2N-suh" secondAttribute="width" multiplier="1.65" id="qfM-Ea-VL0"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.22745098039215686" green="0.38039215686274508" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="OF7-HH-tW0" secondAttribute="trailing" constant="10" id="SVf-2Z-L4N"/>
+                                            <constraint firstItem="OF7-HH-tW0" firstAttribute="leading" secondItem="mQ8-Bf-nfT" secondAttribute="leading" constant="10" id="aFO-ZC-uyk"/>
+                                            <constraint firstItem="OF7-HH-tW0" firstAttribute="top" secondItem="mQ8-Bf-nfT" secondAttribute="top" constant="10" id="wai-VN-gzu"/>
+                                            <constraint firstAttribute="bottom" secondItem="OF7-HH-tW0" secondAttribute="bottom" constant="10" id="yCP-Id-khw"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ika-ip-Z4v" userLabel="MaeginAreaView">
+                                        <rect key="frame" x="0.0" y="312" width="320" height="71.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FMA-uM-sAL">
+                                                <rect key="frame" x="10" y="10" width="300" height="51.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QZN-ve-rOS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="51.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="必要証拠金" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="TUE-mx-x4g" userLabel="MarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="51.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50,000" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDw-oS-KoJ" userLabel="MarginValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="51.5"/>
+                                                                <color key="backgroundColor" red="0.98039215686274506" green="0.85882352941176465" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.34509803919999998" green="0.39607843139999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="2"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="vWR-fL-3mq" userLabel="MarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="51.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="aDw-oS-KoJ" firstAttribute="width" secondItem="TUE-mx-x4g" secondAttribute="width" multiplier="1.65" id="VvC-oO-IBW"/>
+                                                            <constraint firstItem="vWR-fL-3mq" firstAttribute="width" secondItem="TUE-mx-x4g" secondAttribute="width" multiplier="0.2" id="cv5-eG-4rw"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.17254901959999999" green="0.29411764709999999" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="FMA-uM-sAL" firstAttribute="leading" secondItem="ika-ip-Z4v" secondAttribute="leading" constant="10" id="7zb-QG-Ss5"/>
+                                            <constraint firstItem="FMA-uM-sAL" firstAttribute="top" secondItem="ika-ip-Z4v" secondAttribute="top" constant="10" id="RfW-xp-DTY"/>
+                                            <constraint firstAttribute="bottom" secondItem="FMA-uM-sAL" secondAttribute="bottom" constant="10" id="mDS-Lc-KjK"/>
+                                            <constraint firstAttribute="trailing" secondItem="FMA-uM-sAL" secondAttribute="trailing" constant="10" id="pVp-OS-mtV"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPr-ty-ux0" userLabel="LossCutView">
+                                        <rect key="frame" x="0.0" y="383.5" width="320" height="95.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8Km-UQ-3KQ">
+                                                <rect key="frame" x="10" y="5" width="300" height="85.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bRi-o1-4GL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="JQA-Gf-A5x" userLabel="MarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="98" height="39"/>
+                                                                <string key="text">ロスカット
+レート</string>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1G-mf-yJt" userLabel="MarginValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="108" y="0.0" width="162" height="39"/>
+                                                                <color key="backgroundColor" red="0.98039215686274506" green="0.85882352941176465" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.34509803919999998" green="0.39607843139999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="2"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="7vq-db-EAW" userLabel="MarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="280" y="0.0" width="20" height="39"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="B1G-mf-yJt" firstAttribute="width" secondItem="JQA-Gf-A5x" secondAttribute="width" multiplier="1.65" id="EhX-Gb-4Hg"/>
+                                                            <constraint firstItem="7vq-db-EAW" firstAttribute="width" secondItem="JQA-Gf-A5x" secondAttribute="width" multiplier="0.2" id="gGa-Q7-qHq"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-Lq-mGM">
+                                                        <rect key="frame" x="0.0" y="47" width="300" height="38.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Crw-si-t98" userLabel="MarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.5" width="98" height="38.5"/>
+                                                                <string key="text">ロスカット
+損失</string>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np3-oS-LCS" userLabel="MarginValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="108" y="0.5" width="162" height="38.5"/>
+                                                                <color key="backgroundColor" red="0.98039215686274506" green="0.85882352941176465" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.34509803919999998" green="0.39607843139999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="2"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="KRY-iB-BhU" userLabel="MarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="280" y="0.5" width="20" height="38.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Np3-oS-LCS" firstAttribute="width" secondItem="Crw-si-t98" secondAttribute="width" multiplier="1.65" id="6AL-Js-JxQ"/>
+                                                            <constraint firstItem="KRY-iB-BhU" firstAttribute="width" secondItem="Crw-si-t98" secondAttribute="width" multiplier="0.2" id="U3v-Sy-ztb"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.20784313730000001" green="0.42352941179999998" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="8Km-UQ-3KQ" firstAttribute="top" secondItem="WPr-ty-ux0" secondAttribute="top" constant="5" id="JeJ-Wc-tuh"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Km-UQ-3KQ" secondAttribute="trailing" constant="10" id="Mlh-MU-YSu"/>
+                                            <constraint firstAttribute="bottom" secondItem="8Km-UQ-3KQ" secondAttribute="bottom" constant="5" id="ZWp-Zr-JC3"/>
+                                            <constraint firstItem="8Km-UQ-3KQ" firstAttribute="leading" secondItem="WPr-ty-ux0" secondAttribute="leading" constant="10" id="mrT-eC-rQu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mQ8-Bf-nfT" firstAttribute="height" secondItem="jmC-y2-coy" secondAttribute="height" multiplier="0.65" id="1jA-hT-j9b"/>
+                                    <constraint firstItem="WPr-ty-ux0" firstAttribute="top" secondItem="ika-ip-Z4v" secondAttribute="bottom" id="ADr-Pg-FMm"/>
+                                    <constraint firstItem="ika-ip-Z4v" firstAttribute="top" secondItem="mQ8-Bf-nfT" secondAttribute="bottom" id="DFb-4F-FRC"/>
+                                    <constraint firstItem="ika-ip-Z4v" firstAttribute="top" secondItem="mQ8-Bf-nfT" secondAttribute="bottom" id="HJM-Y3-Luj"/>
+                                    <constraint firstItem="ika-ip-Z4v" firstAttribute="leading" secondItem="jmC-y2-coy" secondAttribute="trailing" id="II1-U0-MTC"/>
+                                    <constraint firstItem="WPr-ty-ux0" firstAttribute="height" secondItem="jmC-y2-coy" secondAttribute="height" multiplier="0.2" id="L7i-oz-qLs"/>
+                                    <constraint firstAttribute="trailing" secondItem="WPr-ty-ux0" secondAttribute="trailing" id="NP3-aH-BGR"/>
+                                    <constraint firstItem="mQ8-Bf-nfT" firstAttribute="top" secondItem="GXA-3s-Awe" secondAttribute="top" id="Qry-aL-2pZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="mQ8-Bf-nfT" secondAttribute="trailing" id="R0Z-kA-fLr"/>
+                                    <constraint firstItem="ika-ip-Z4v" firstAttribute="height" secondItem="jmC-y2-coy" secondAttribute="height" multiplier="0.15" id="XRs-3S-6Ff"/>
+                                    <constraint firstItem="WPr-ty-ux0" firstAttribute="leading" secondItem="jmC-y2-coy" secondAttribute="trailing" id="f6m-ms-7zJ"/>
+                                    <constraint firstItem="WPr-ty-ux0" firstAttribute="top" secondItem="ika-ip-Z4v" secondAttribute="bottom" id="hty-eo-w5y"/>
+                                    <constraint firstAttribute="bottom" secondItem="jmC-y2-coy" secondAttribute="bottom" id="khC-C4-pkX"/>
+                                    <constraint firstAttribute="trailing" secondItem="ika-ip-Z4v" secondAttribute="trailing" id="nyg-0r-Ep6"/>
+                                    <constraint firstItem="jmC-y2-coy" firstAttribute="top" secondItem="GXA-3s-Awe" secondAttribute="top" id="wQc-s7-718"/>
+                                    <constraint firstItem="jmC-y2-coy" firstAttribute="leading" secondItem="GXA-3s-Awe" secondAttribute="leading" id="wih-fQ-W3g"/>
+                                    <constraint firstItem="mQ8-Bf-nfT" firstAttribute="leading" secondItem="jmC-y2-coy" secondAttribute="trailing" id="yTA-GF-XuF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RoK-AE-o3G" firstAttribute="bottom" secondItem="GXA-3s-Awe" secondAttribute="bottom" id="Gr2-C1-foH"/>
+                            <constraint firstItem="GXA-3s-Awe" firstAttribute="leading" secondItem="RoK-AE-o3G" secondAttribute="leading" id="LVF-fv-LIh"/>
+                            <constraint firstItem="RoK-AE-o3G" firstAttribute="trailing" secondItem="GXA-3s-Awe" secondAttribute="trailing" id="UhM-5J-MYO"/>
+                            <constraint firstItem="GXA-3s-Awe" firstAttribute="top" secondItem="RoK-AE-o3G" secondAttribute="top" id="wIH-JP-eNO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RoK-AE-o3G"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="PaN-sk-iYy"/>
+                    <tabBarItem key="tabBarItem" title="円" image="yen.png" id="PaN-sk-iYy"/>
+                    <connections>
+                        <outlet property="outletLotsTitleLabel" destination="S3z-fw-tVv" id="2sK-hR-Jvr"/>
+                        <outlet property="outletMainContentsView" destination="GXA-3s-Awe" id="hg6-dg-km2"/>
+                        <outlet property="outletMarginTitleLabel" destination="ofZ-lk-ygZ" id="X3o-4w-eoT"/>
+                        <outlet property="outletTradeTypeTextField" destination="oEb-NZ-VpE" id="cgl-6V-WZ1"/>
+                        <outlet property="outletYenRateValueTextField" destination="Ha1-JC-ZcB" id="Pir-Ds-ajq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilW-ZL-77a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1993" y="504"/>
+            <point key="canvasLocation" x="1003" y="1500"/>
         </scene>
-        <!--Item-->
+        <!--ドル-->
         <scene sceneID="IR6-Zh-BP1">
             <objects>
-                <viewController id="Q6K-Zd-ueO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Wx-Eu-lKr">
+                <viewController id="Q6K-Zd-ueO" customClass="TabDollarBasisViewController" customModule="FX_margin3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Wx-Eu-lKr" userLabel="TopView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="f8J-Vj-crx"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="AyY-eB-hcC"/>
+                    <tabBarItem key="tabBarItem" title="ドル" image="doller.png" id="AyY-eB-hcC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcb-KH-8HY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1944" y="-173"/>
+            <point key="canvasLocation" x="1881" y="1501"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fHQ-kv-ZgT">
@@ -93,7 +866,14 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mKj-wL-5sV">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="SelectedTextColor">
+                                <color key="value" red="0.98039215690000003" green="0.41176470590000003" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="BarColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="Ywn-OJ-Cg1" kind="relationship" relationship="viewControllers" id="bHG-bK-SeL"/>
@@ -105,4 +885,8 @@
             <point key="canvasLocation" x="1114" y="670"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doller.png" width="30" height="30"/>
+        <image name="yen.png" width="30" height="30"/>
+    </resources>
 </document>

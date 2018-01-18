@@ -8,28 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		0DD14083CF4D9549B78C03DB /* Pods_FX_margin3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59BF5A69BD437F88F9365AE /* Pods_FX_margin3.framework */; };
+		4102B328200315F000AE2039 /* YenRateValueTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4102B327200315F000AE2039 /* YenRateValueTextField.swift */; };
 		410FE4EA1FFB54CA008DB2AE /* AdModMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FE4E81FFB54CA008DB2AE /* AdModMgr.swift */; };
 		410FE4EB1FFB54CA008DB2AE /* AdModDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FE4E91FFB54CA008DB2AE /* AdModDef.swift */; };
 		410FE4F11FFB645A008DB2AE /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FE4F01FFB645A008DB2AE /* TopViewController.swift */; };
 		410FE4F21FFB74CD008DB2AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 410FE4EC1FFB59B2008DB2AE /* GoogleService-Info.plist */; };
+		410FE4F41FFCA404008DB2AE /* TabYenBasisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FE4F31FFCA404008DB2AE /* TabYenBasisViewController.swift */; };
+		410FE4F61FFCAF19008DB2AE /* XIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FE4F51FFCAF19008DB2AE /* XIPaddingLabel.swift */; };
+		410FE4F81FFCAF9B008DB2AE /* XICommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FE4F71FFCAF9A008DB2AE /* XICommonUtility.swift */; };
+		41440D9E20086538005E846B /* XINumberTextFieldWithToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41440D9D20086538005E846B /* XINumberTextFieldWithToolbar.swift */; };
+		414AEC23200DB98F00D0AB96 /* doller.png in Resources */ = {isa = PBXBuildFile; fileRef = 414AEC22200DB98F00D0AB96 /* doller.png */; };
+		414AEC25200DBD4600D0AB96 /* doller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 414AEC24200DBD4300D0AB96 /* doller@2x.png */; };
+		414AEC28200DBD4C00D0AB96 /* yen.png in Resources */ = {isa = PBXBuildFile; fileRef = 414AEC26200DBD4C00D0AB96 /* yen.png */; };
+		414AEC29200DBD4C00D0AB96 /* yen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 414AEC27200DBD4C00D0AB96 /* yen@2x.png */; };
+		417C9B5C1FFDACF200D4C1CB /* TabDollarBasisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C9B5B1FFDACF100D4C1CB /* TabDollarBasisViewController.swift */; };
 		418E18671FF663E400216CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E18661FF663E400216CCC /* AppDelegate.swift */; };
-		418E18691FF663E400216CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E18681FF663E400216CCC /* ViewController.swift */; };
 		418E186C1FF663E400216CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418E186A1FF663E400216CCC /* Main.storyboard */; };
 		418E186E1FF663E400216CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418E186D1FF663E400216CCC /* Assets.xcassets */; };
+		41A5081820098EC800878871 /* XIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A5081720098EC800878871 /* XIViewController.swift */; };
+		41A5081E2009ED7C00878871 /* TradeTypePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A5081D2009ED7C00878871 /* TradeTypePickerTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DAA64179B4ADCFF09188E71 /* Pods-FX_margin3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FX_margin3.release.xcconfig"; path = "Pods/Target Support Files/Pods-FX_margin3/Pods-FX_margin3.release.xcconfig"; sourceTree = "<group>"; };
+		4102B327200315F000AE2039 /* YenRateValueTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YenRateValueTextField.swift; sourceTree = "<group>"; };
 		410FE4E81FFB54CA008DB2AE /* AdModMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdModMgr.swift; sourceTree = "<group>"; };
 		410FE4E91FFB54CA008DB2AE /* AdModDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdModDef.swift; sourceTree = "<group>"; };
 		410FE4EC1FFB59B2008DB2AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		410FE4F01FFB645A008DB2AE /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		410FE4F31FFCA404008DB2AE /* TabYenBasisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabYenBasisViewController.swift; sourceTree = "<group>"; };
+		410FE4F51FFCAF19008DB2AE /* XIPaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIPaddingLabel.swift; sourceTree = "<group>"; };
+		410FE4F71FFCAF9A008DB2AE /* XICommonUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XICommonUtility.swift; sourceTree = "<group>"; };
+		41440D9D20086538005E846B /* XINumberTextFieldWithToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XINumberTextFieldWithToolbar.swift; sourceTree = "<group>"; };
+		414AEC22200DB98F00D0AB96 /* doller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doller.png; sourceTree = "<group>"; };
+		414AEC24200DBD4300D0AB96 /* doller@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doller@2x.png"; sourceTree = "<group>"; };
+		414AEC26200DBD4C00D0AB96 /* yen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yen.png; sourceTree = "<group>"; };
+		414AEC27200DBD4C00D0AB96 /* yen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yen@2x.png"; sourceTree = "<group>"; };
+		417C9B5B1FFDACF100D4C1CB /* TabDollarBasisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabDollarBasisViewController.swift; sourceTree = "<group>"; };
 		418E18631FF663E300216CCC /* FX_margin3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FX_margin3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418E18661FF663E400216CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		418E18681FF663E400216CCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		418E186B1FF663E400216CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		418E186D1FF663E400216CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		418E18721FF663E400216CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41A5081720098EC800878871 /* XIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIViewController.swift; sourceTree = "<group>"; };
+		41A5081D2009ED7C00878871 /* TradeTypePickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeTypePickerTextField.swift; sourceTree = "<group>"; };
 		8D2B301AA6A92F2028DA2DB1 /* Pods-FX_margin3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FX_margin3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FX_margin3/Pods-FX_margin3.debug.xcconfig"; sourceTree = "<group>"; };
 		B59BF5A69BD437F88F9365AE /* Pods_FX_margin3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FX_margin3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,11 +93,22 @@
 				410FE4E81FFB54CA008DB2AE /* AdModMgr.swift */,
 				410FE4EC1FFB59B2008DB2AE /* GoogleService-Info.plist */,
 				418E18661FF663E400216CCC /* AppDelegate.swift */,
-				410FE4F01FFB645A008DB2AE /* TopViewController.swift */,
-				418E18681FF663E400216CCC /* ViewController.swift */,
+				4102B327200315F000AE2039 /* YenRateValueTextField.swift */,
+				410FE4F51FFCAF19008DB2AE /* XIPaddingLabel.swift */,
+				41440D9D20086538005E846B /* XINumberTextFieldWithToolbar.swift */,
+				410FE4F71FFCAF9A008DB2AE /* XICommonUtility.swift */,
+				41A5081720098EC800878871 /* XIViewController.swift */,
+				41A5081D2009ED7C00878871 /* TradeTypePickerTextField.swift */,
 				418E186A1FF663E400216CCC /* Main.storyboard */,
 				418E186D1FF663E400216CCC /* Assets.xcassets */,
 				418E18721FF663E400216CCC /* Info.plist */,
+				410FE4F01FFB645A008DB2AE /* TopViewController.swift */,
+				410FE4F31FFCA404008DB2AE /* TabYenBasisViewController.swift */,
+				417C9B5B1FFDACF100D4C1CB /* TabDollarBasisViewController.swift */,
+				414AEC22200DB98F00D0AB96 /* doller.png */,
+				414AEC24200DBD4300D0AB96 /* doller@2x.png */,
+				414AEC26200DBD4C00D0AB96 /* yen.png */,
+				414AEC27200DBD4C00D0AB96 /* yen@2x.png */,
 			);
 			path = FX_margin3;
 			sourceTree = "<group>";
@@ -159,9 +192,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414AEC28200DBD4C00D0AB96 /* yen.png in Resources */,
 				418E186E1FF663E400216CCC /* Assets.xcassets in Resources */,
 				418E186C1FF663E400216CCC /* Main.storyboard in Resources */,
 				410FE4F21FFB74CD008DB2AE /* GoogleService-Info.plist in Resources */,
+				414AEC25200DBD4600D0AB96 /* doller@2x.png in Resources */,
+				414AEC23200DB98F00D0AB96 /* doller.png in Resources */,
+				414AEC29200DBD4C00D0AB96 /* yen@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,11 +257,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A5081820098EC800878871 /* XIViewController.swift in Sources */,
+				41440D9E20086538005E846B /* XINumberTextFieldWithToolbar.swift in Sources */,
 				410FE4F11FFB645A008DB2AE /* TopViewController.swift in Sources */,
-				418E18691FF663E400216CCC /* ViewController.swift in Sources */,
+				4102B328200315F000AE2039 /* YenRateValueTextField.swift in Sources */,
+				417C9B5C1FFDACF200D4C1CB /* TabDollarBasisViewController.swift in Sources */,
 				410FE4EB1FFB54CA008DB2AE /* AdModDef.swift in Sources */,
+				410FE4F81FFCAF9B008DB2AE /* XICommonUtility.swift in Sources */,
 				410FE4EA1FFB54CA008DB2AE /* AdModMgr.swift in Sources */,
+				410FE4F41FFCA404008DB2AE /* TabYenBasisViewController.swift in Sources */,
+				41A5081E2009ED7C00878871 /* TradeTypePickerTextField.swift in Sources */,
 				418E18671FF663E400216CCC /* AppDelegate.swift in Sources */,
+				410FE4F61FFCAF19008DB2AE /* XIPaddingLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,6 +42,10 @@ class TopViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let statusBar = UIView(frame:CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: 20.0))
+        statusBar.backgroundColor = UIColor.black
+        
+        view.addSubview(statusBar)
     }
 
     /**
