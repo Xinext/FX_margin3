@@ -94,6 +94,8 @@ class XIPaddingLabel: UILabel {
         let padding = UIEdgeInsets(top: _paddingTop, left: _paddingLeft, bottom: _paddingBottom, right: _paddingRight)
         
         let text = self.text
+        if ( text == nil ){return}
+        
         if (text!.count == 0) {
             return
         }

@@ -102,7 +102,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123.567" borderStyle="roundedRect" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ha1-JC-ZcB" userLabel="RateValueTextField" customClass="YenRateValueTextField" customModule="FX_margin3" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ha1-JC-ZcB" userLabel="RateValueTextField" customClass="YenRateValueTextField" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108.5" y="0.0" width="162" height="44.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
@@ -120,6 +120,10 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="UseToolbar" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingSize">
+                                                                        <real key="value" value="20"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
@@ -172,7 +176,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="888" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="veH-9d-sdX" userLabel="LeverageValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="veH-9d-sdX" userLabel="LeverageValueTextField" customClass="LeverageValueTextField" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108.5" y="0.0" width="162" height="44.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
@@ -181,9 +185,7 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
                                                                         <integer key="value" value="4"/>
                                                                     </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="DecimalPoint">
-                                                                        <integer key="value" value="0"/>
-                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="DecimalPoint" value="NO"/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                         <color key="value" red="0.17254901960784313" green="0.29411764705882354" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
@@ -246,7 +248,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123.567" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="f6w-WH-9EY" userLabel="LotsValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="f6w-WH-9EY" userLabel="LotsValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108" y="0.0" width="162.5" height="44.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
@@ -255,9 +257,7 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
                                                                         <integer key="value" value="7"/>
                                                                     </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="DecimalPoint">
-                                                                        <integer key="value" value="3"/>
-                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="DecimalPoint" value="YES"/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                         <color key="value" red="0.17254901959999999" green="0.29411764709999999" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
@@ -318,7 +318,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123.567" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="ipf-qh-jDf" userLabel="BalanceValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="ipf-qh-jDf" userLabel="BalanceValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108.5" y="0.0" width="162" height="44.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
@@ -327,9 +327,7 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
                                                                         <integer key="value" value="7"/>
                                                                     </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="DecimalPoint">
-                                                                        <integer key="value" value="3"/>
-                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="DecimalPoint" value="NO"/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                         <color key="value" red="0.20784313725490194" green="0.42352941176470588" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
@@ -370,7 +368,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PVn-eg-ddo">
                                                         <rect key="frame" x="0.0" y="198" width="300" height="44.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="ofZ-lk-ygZ" userLabel="MarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="ofZ-lk-ygZ" userLabel="LossCutMarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="98" height="44.5"/>
                                                                 <string key="text">ロスカット
 維持率</string>
@@ -392,7 +390,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123.567" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="qpF-t7-G2N" userLabel="MarginValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="qpF-t7-G2N" userLabel="LossCutMarginValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108" y="0.0" width="161.5" height="44.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
@@ -401,9 +399,7 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
                                                                         <integer key="value" value="7"/>
                                                                     </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="DecimalPoint">
-                                                                        <integer key="value" value="3"/>
-                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="DecimalPoint" value="NO"/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                         <color key="value" red="0.20784313730000001" green="0.42352941179999998" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </userDefinedRuntimeAttribute>
@@ -415,7 +411,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="％" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="5iG-tN-2AN" userLabel="MarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="％" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="5iG-tN-2AN" userLabel="LossCutMarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="279.5" y="0.0" width="20.5" height="44.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -464,7 +460,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123.567" borderStyle="roundedRect" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-NZ-VpE" userLabel="TradeTypeTextField" customClass="TradeTypePickerTextField" customModule="FX_margin3" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-NZ-VpE" userLabel="TradeTypeTextField" customClass="TradeTypePickerTextField" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108.5" y="0.0" width="162" height="44.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
@@ -553,10 +549,10 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50,000" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDw-oS-KoJ" userLabel="MarginValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDw-oS-KoJ" userLabel="MarginValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108.5" y="0.0" width="162" height="51.5"/>
                                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.85882352941176465" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -629,7 +625,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bRi-o1-4GL">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="39"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="JQA-Gf-A5x" userLabel="MarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="JQA-Gf-A5x" userLabel="LossCutRateTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="98" height="39"/>
                                                                 <string key="text">ロスカット
 レート</string>
@@ -651,10 +647,10 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1G-mf-yJt" userLabel="MarginValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1G-mf-yJt" userLabel="LossCutRateValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108" y="0.0" width="162" height="39"/>
                                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.85882352941176465" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -681,7 +677,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="7vq-db-EAW" userLabel="MarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="7vq-db-EAW" userLabel="LossCutRateUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="280" y="0.0" width="20" height="39"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -710,7 +706,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-Lq-mGM">
                                                         <rect key="frame" x="0.0" y="47" width="300" height="38.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Crw-si-t98" userLabel="MarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Crw-si-t98" userLabel="LossCutLossTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.5" width="98" height="38.5"/>
                                                                 <string key="text">ロスカット
 損失</string>
@@ -732,10 +728,10 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np3-oS-LCS" userLabel="MarginValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np3-oS-LCS" userLabel="LossCutLossValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108" y="0.5" width="162" height="38.5"/>
                                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.85882352941176465" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -762,7 +758,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="KRY-iB-BhU" userLabel="MarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="KRY-iB-BhU" userLabel="LossCutLossUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="280" y="0.5" width="20" height="38.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -832,9 +828,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="円" image="yen.png" id="PaN-sk-iYy"/>
                     <connections>
-                        <outlet property="outletLotsTitleLabel" destination="S3z-fw-tVv" id="2sK-hR-Jvr"/>
+                        <outlet property="outletBalanceValueTextField" destination="ipf-qh-jDf" id="eRL-wN-sd9"/>
+                        <outlet property="outletLeverageValueTextField" destination="veH-9d-sdX" id="HoX-PS-3Jm"/>
+                        <outlet property="outletLossCutLossValueLabel" destination="Np3-oS-LCS" id="sVx-as-O4j"/>
+                        <outlet property="outletLossCutMarginValueTextField" destination="qpF-t7-G2N" id="hOt-sb-8I1"/>
+                        <outlet property="outletLossCutRateValueLabel" destination="B1G-mf-yJt" id="8ZY-8v-yjS"/>
+                        <outlet property="outletLotsValueTextField" destination="f6w-WH-9EY" id="iXL-W7-UKZ"/>
                         <outlet property="outletMainContentsView" destination="GXA-3s-Awe" id="hg6-dg-km2"/>
-                        <outlet property="outletMarginTitleLabel" destination="ofZ-lk-ygZ" id="X3o-4w-eoT"/>
+                        <outlet property="outletMarginValueLabel" destination="aDw-oS-KoJ" id="bRk-bJ-BkE"/>
                         <outlet property="outletTradeTypeTextField" destination="oEb-NZ-VpE" id="cgl-6V-WZ1"/>
                         <outlet property="outletYenRateValueTextField" destination="Ha1-JC-ZcB" id="Pir-Ds-ajq"/>
                     </connections>

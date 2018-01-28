@@ -7,42 +7,37 @@ import UIKit
 
 class TabYenBasisViewController: XIViewController {
 
-    
+    // MARK: - const value
     private let TRADETYPE_SHORT: Int = 0
     private let TRADETYPE_LONG: Int = 1
 
-    @IBOutlet weak var outletMainContentsView: UIView!
+    // MARK: - private variable
     private var firstAppear: Bool = false
-    
-    @IBOutlet weak var outletTradeTypeSegment: UISegmentedControl!
-    
+
+    // MARK: - IBOutlet
+    @IBOutlet weak var outletMainContentsView: UIView!
+
     @IBOutlet weak var outletYenRateValueTextField: YenRateValueTextField!
-    
+    @IBOutlet weak var outletLeverageValueTextField: LeverageValueTextField!
+    @IBOutlet weak var outletLotsValueTextField: XINumberTextFieldWithToolbar!
+    @IBOutlet weak var outletBalanceValueTextField: XINumberTextFieldWithToolbar!
+    @IBOutlet weak var outletLossCutMarginValueTextField: XINumberTextFieldWithToolbar!
     @IBOutlet weak var outletTradeTypeTextField: TradeTypePickerTextField!
 
-    @IBOutlet weak var outletLotsTitleLabel: XIPaddingLabel!
-    @IBOutlet weak var outletMarginTitleLabel: XIPaddingLabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var outletMarginValueLabel: XIPaddingLabel!
+    @IBOutlet weak var outletLossCutRateValueLabel: XIPaddingLabel!
+    @IBOutlet weak var outletLossCutLossValueLabel: XIPaddingLabel!
 
+    // MARK: - override
+    override func viewDidLoad() {
         
+        super.viewDidLoad()
         // Do any additional setup after loading the view.
-        outletYenRateValueTextField.delegate = self
-        outletTradeTypeTextField.delegate = self
         
-        //setTapGestureRecognizerForLabel(outletLeverageValueLabel)
-        
-        setTradeTypeSegment(TRADETYPE_LONG)
-  
+        // 各種初期化
+        initConfig()
     }
 
-   
-    
-    
-    /**
-     Viewが表示される直前に呼び出されるイベントハンドラー
-     */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -53,141 +48,122 @@ class TabYenBasisViewController: XIViewController {
 
     }
     
-    /**
-     Viewが表示された直後に呼び出されるイベントハンドラー
-     */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // 最初に表示される時の処理
         if (firstAppear != true) {
-            
-            outletMarginTitleLabel.FontSizeToFit()
-            outletLotsTitleLabel.FontSizeToFit()
-            //adjustFontSizeOfLabels()
-            
-            //outletLotsTitleLabel.FontSizeToFit()
-            //outletLotsTitle2Label.FontSizeToFit()
-            
-            //print("outletLotsTitleLabel.font.pointSize=", outletLotsTitleLabel.font.pointSize)
             outletMainContentsView.isHidden = false // メインコンテンツの準備が完了したので表示
-            
-            
             firstAppear = true
         }
     }
-    
     
     override func viewWillDisappear(_ animated: Bool) {
         
         super.viewWillDisappear(animated)
     }
 
-
-    
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        
+        super.viewDidLayoutSubviews()
+        
+        adjustFontSizeOfTextFilds()
+    }
 
-    func setTapGestureRecognizerForLabel(_ label: UILabel) {
+    /// 各TextFieldが変更された時の処理
+    ///
+    /// - Parameters:
+    ///   - sender: 該当のコントロール
+    @objc func textFieldEditingChanged(sender: UITextField) {
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction))
-        label.isUserInteractionEnabled = true
-        label.addGestureRecognizer(tap)
-    }
-    
-    //UILabelをタップした時に動く関数
-    @objc func tapFunction(sender:UITapGestureRecognizer) {
-        /*
-        if ( sender.view == outletRateValueLabel ) {
-            print("outletRateValueLabel tap working")
-            
-            //let xibView = NumericKeypadView(frame: self.view.frame )
-            //self.view.addSubview(xibView)
-            
-            let nextvc = NumericKeypadViewController()
-            //nextvc.view.backgroundColor = UIColor.blue
-            self.present(nextvc, animated: true, completion: nil)
+        // 入力値を取得
+        let decRate = outletYenRateValueTextField.GetDecimalValue()
+        let decLeverage = outletLeverageValueTextField.GetDecimalValue()
+        let decLots = outletLotsValueTextField.GetDecimalValue() * 10000    // Convert to １万通貨
+        let decBalance = outletBalanceValueTextField.GetDecimalValue()
+        let decLossCutMargin = outletLossCutMarginValueTextField.GetDecimalValue() / 100  // % to calculation value
+        let decTradeType = outletTradeTypeTextField.GetDecimalValue()
+       
+        // 必要証拠金 = (現在レート * ロット数) / レバレッジ
+        let decMargin: Decimal?
+        if ( decLeverage != 0 ) {
+           decMargin = (decRate * decLots) / decLeverage
         }
-        */
-        /*
-        if ( sender.view == outletLeverageValueLabel ) {
-            print("outletLeverageValueLabel tap working")
+        else {
+           decMargin = nil
         }
- */
+        outletMarginValueLabel.text = decMargin?.description
+        outletMarginValueLabel.FontSizeToFit()
         
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    
-    /**
-     セグメントコントロールの設定 for 取引種別
-     */
-    private func setTradeTypeSegment(_ type: Int) {
-        /*
-        // 選択セグメントの背景色をチーム色へ設定する
-        switch type {
-        case TRADETYPE_SHORT:
-            outletTradeTypeSegment.tintColor = UIColor(red: 0, green: 0, blue: 255, alpha: 1)
+        if ( decMargin != nil && decLots != 0 ) {
             
-        case TRADETYPE_LONG:
-            outletTradeTypeSegment.tintColor = UIColor(red: 255, green: 0, blue: 0, alpha: 1)
-        default:
-            break
+            // ロスカットレート = 現在レート - (((口座残高 - (必要証拠金 * ロスカット維持率)) / ロット数) * 売り[-1]or買い[1])
+            let decLossCutMargin = ((decBalance - (decMargin! * decLossCutMargin)) / decLots) * decTradeType
+            let decLossCutRate = decRate - decLossCutMargin
+            outletLossCutRateValueLabel.text = decLossCutRate.description
+            outletLossCutRateValueLabel.FontSizeToFit()
+            
+            // ロスカット損失 = ABS(ロスカットレート) * ロット数
+            let decLossCutLoss = abs(decLossCutMargin) * decLots
+            outletLossCutLossValueLabel.text = decLossCutLoss.description
+            outletLossCutLossValueLabel.FontSizeToFit()
         }
-        
-        // 共通文字色設定
-        let attributeNormal = [NSAttributedStringKey.foregroundColor:UIColor.white]
-        outletTradeTypeSegment.setTitleTextAttributes(attributeNormal, for: .normal)
-        let attributeSelected = [NSAttributedStringKey.foregroundColor:UIColor.black]
-        outletTradeTypeSegment.setTitleTextAttributes(attributeSelected, for: .selected)
-        
-        outletTradeTypeSegment.backgroundColor = UIColor.gray
- */
+        else {
+            outletLossCutRateValueLabel.text = ""
+            outletLossCutLossValueLabel.text = ""
+        }
     }
     
-    @IBAction func actionTradeTypeValueChanged(_ sender: Any) {
-        setTradeTypeSegment(outletTradeTypeSegment.selectedSegmentIndex)
+    // MARK: - configuration
+    /// 各種設定の初期化
+    func initConfig() {
+        initConfig_textField()
     }
     
+    // (sub)TextFieldの初期化
+    func initConfig_textField() {
+        
+        let tfArray = getTextfields(view: self.view)
+        for tf in tfArray {
+            tf.delegate = self
+            if tf == outletTradeTypeTextField {
+                 tf.addTarget(self, action: #selector(self.textFieldEditingChanged(sender:)), for: .editingDidEnd)
+            }
+            else {
+                tf.text = ""
+                tf.addTarget(self, action: #selector(self.textFieldEditingChanged(sender:)), for: .editingChanged)
+            }
+        }
+    }
     
-    func getTextfield(view: UIView) -> [UITextField] {
+    // MARK: - method
+    /// Viewに追加されているUITextFieldを検索して全て取得
+    ///
+    /// - Parameters:
+    ///   - view: 対象View
+    /// - Returns: UITextFieldの配列
+    func getTextfields(view: UIView) -> [UITextField] {
+        
         var results = [UITextField]()
         for subview in view.subviews as [UIView] {
             if let textField = subview as? UITextField {
                 results += [textField]
             } else {
-                results += getTextfield(view: subview)
+                results += getTextfields(view: subview)
             }
         }
         return results
     }
     
+    /// TextFieldのフォントサイズ最適化
     func adjustFontSizeOfTextFilds() {
         
-        let allTextFields = getTextfield(view: self.view)
+        let allTextFields = getTextfields(view: self.view)
         for textField in allTextFields
         {
             textField.font = UIFont.boldSystemFont(ofSize: 46)
@@ -205,42 +181,4 @@ class TabYenBasisViewController: XIViewController {
             }
         }
     }
-    
-    func getLabelArray(view: UIView) -> [UILabel] {
-        var results = [UILabel]()
-        for subview in view.subviews as [UIView] {
-            if let label = subview as? UILabel {
-                results += [label]
-            } else {
-                results += getLabelArray(view: subview)
-            }
-        }
-        return results
-    }
-    
-    func adjustFontSizeOfLabels() {
-    
-        let labelArray = getLabelArray(view: self.view)
-        var minPointSize = labelArray[0].font.pointSize
-        for label in labelArray
-        {
-            if minPointSize > label.font.pointSize {
-               minPointSize = label.font.pointSize
-            }
-        }
-        
-        for label in labelArray
-        {
-            label.font = label.font?.withSize(minPointSize)
-        }
-    }
-    
-    override func viewDidLayoutSubviews() {
-        
-        super.viewDidLayoutSubviews()
-        
-        adjustFontSizeOfTextFilds()
-
-    }
- 
 }

@@ -7,11 +7,12 @@ import UIKit
 
 class TradeTypePickerTextField: UITextField, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    // MARK: - Private variable
-    let pickerView = UIPickerView()
-    let typeAarray = ["売", "買"]
+    // MARK: - private variable
+    private let pickerView = UIPickerView()
+    let TypeTextAarray: [String] = ["買","売"]
+    let TypeValueAarray: [Decimal] = [1,-1]
     
-    // MARK: - Initiallizer
+    // MARK: - initiallizer
     override init(frame: CGRect) {
         super.init(frame: frame)
         initConfig()
@@ -22,9 +23,8 @@ class TradeTypePickerTextField: UITextField, UIPickerViewDelegate, UIPickerViewD
         initConfig()
     }
     
-    /**
-     各種設定の初期化
-     */
+    // MARK: - configuration
+    /// 各種設定の初期化
     private func initConfig() {
         
         // PickerViewの設定
@@ -44,7 +44,7 @@ class TradeTypePickerTextField: UITextField, UIPickerViewDelegate, UIPickerViewD
         toolBar.isTranslucent = true
         toolBar.tintColor = UIColor.black
         
-        let okButton   = UIBarButtonItem(title: "OK", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.donePressed))
+        let okButton   = UIBarButtonItem(title: "閉じる", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.donePressed))
         let spaceButton  = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         
@@ -53,17 +53,20 @@ class TradeTypePickerTextField: UITextField, UIPickerViewDelegate, UIPickerViewD
         toolBar.sizeToFit()
         self.inputAccessoryView = toolBar
         
-        self.text = typeAarray[0]
+        pickerView.selectRow(0, inComponent: 0, animated: false)
+        self.text = TypeTextAarray[0]
     }
 
-    // Done
+    // MARK: - callback
+    /// 閉じるボタン 押下
     @objc func donePressed() {
-        
         self.superview?.endEditing(true)
     }
+    
+    // MARK: - protocol
     /// 表示する文字列
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return typeAarray[row]
+        return TypeTextAarray[row]
     }
     
     /// 桁数の設定
@@ -73,12 +76,16 @@ class TradeTypePickerTextField: UITextField, UIPickerViewDelegate, UIPickerViewD
     
     /// アイテムの表示個数の設定
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return typeAarray.count
+        return TypeTextAarray.count
     }
     
     /// 選択の処理
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.text = typeAarray[row]
+        self.text = TypeTextAarray[row]
     }
 
+    // MARK: - method
+    func GetDecimalValue() -> Decimal {
+        return TypeValueAarray[pickerView.selectedRow(inComponent: 0)]
+    }
 }

@@ -10,22 +10,18 @@ class XIViewController: UIViewController, UITextFieldDelegate  {
     // MARK: - private variable
     private var txtActiveField = UITextField()
 
-    // MARK: - Override for UIViewControllerevent handlers
+    // MARK: - override for UIViewControllerevent
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        
         super.viewWillAppear(animated)
         self.configureObserver()
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
         super.viewWillDisappear(animated)
         self.removeObserver() // Notificationを画面が消えるときに削除
     }
@@ -35,8 +31,7 @@ class XIViewController: UIViewController, UITextFieldDelegate  {
         // Dispose of any resources that can be recreated.
     }
     
-
-    // MARK: - Callback function for delegate
+    // MARK: - protcol for UITextFieldDelegate
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         txtActiveField = textField
         return true
@@ -47,7 +42,27 @@ class XIViewController: UIViewController, UITextFieldDelegate  {
         return true
     }
     
-    // MARK: - Open method
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        
+        // for XINumberTextFieldWithToolbar
+        let numTextField = textField as? XINumberTextFieldWithToolbar
+        if (numTextField != nil ) {
+            if numTextField?.isDecimalConvert == true { // 数値の時は、アプリが認識している数値を表示する（Swiftの仕様変更に備える対応）
+                if numTextField?.text?.isEmpty != true{ // 小数点入力だけの場合は０として扱う
+                    numTextField?.text = numTextField?.GetDecimalValue().description
+                }
+            }
+            else {
+                XIDialog.DispAlertMsg(pvc: self,
+                                      msg: NSLocalizedString("MSG_ERR_NONUMBER", comment: "error"))
+                return false
+            }
+        }
+        
+        return true
+    }
+    
+    // MARK: - method
     /// Notificationを設定
     func configureObserver() {
         
@@ -63,7 +78,7 @@ class XIViewController: UIViewController, UITextFieldDelegate  {
         notification.removeObserver(self)
     }
     
-    // MARK: - #selector method
+    // MARK: - callback <NotificationCenter>
     /// キーボードが現れた時
     @objc func keyboardWillShow(notification: Notification?) {
         
@@ -87,9 +102,5 @@ class XIViewController: UIViewController, UITextFieldDelegate  {
     /// キーボードが消えたときに、画面を戻す
     @objc func keyboardWillHide(notification: Notification?) {
         self.view.frame.origin.y = 0
-        
     }
-    
-
-    
 }

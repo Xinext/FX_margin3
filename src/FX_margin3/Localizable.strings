@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  FX_margin3
+*/
+
+// MARK: - Common strings
+"STR_ALERT" = "注意";
+"STR_INFO" = "情報";
+"STR_QUESTION" = "質問";
+"STR_CONFIRMATION" = "確認";
+
+"STR_OK" = "OK";
+"STR_CANCEL" = "キャンセル";
+"STR_YES" = "はい";
+"STR_NO" = "いいえ";
+
+// MARK: - Application
+"MSG_ERR_GETRATE" = "レートの取得に失敗しました。";
+"MSG_ERR_NONUMBER" = "数値を入力してください。";
