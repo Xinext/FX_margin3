@@ -53,15 +53,13 @@ class FXMarginViewController: UIViewController, UITextFieldDelegate  {
         
         let tfArray = getTextfields(view: self.view)
         for tf in tfArray {
-            tf.delegate = self
             
-            if ((tf is TradeTypePickerTextField) == true) {
-                tf.addTarget(self, action: #selector(self.textFieldEditingChanged(sender:)), for: .editingDidEnd)
-            }
+            tf.delegate = self
+            tf.addTarget(self, action: #selector(self.textFieldEditingChanged(sender:)), for: .editingChanged)
+            tf.addTarget(self, action: #selector(self.textFieldEditingChanged(sender:)), for: .editingDidEnd)
 
             if ((tf is XINumberTextFieldWithToolbar) == true) {
                 tf.text = ""
-                tf.addTarget(self, action: #selector(self.textFieldEditingChanged(sender:)), for: .editingChanged)
             }
         }
     }
@@ -87,7 +85,7 @@ class FXMarginViewController: UIViewController, UITextFieldDelegate  {
         if (numTextField != nil ) {
             if numTextField?.isDecimalConvert == true { // 数値の時は、アプリが認識している数値を表示する（Swiftの仕様変更に備える対応）
                 if numTextField?.text?.isEmpty != true{ // 小数点入力だけの場合は０として扱う
-                    numTextField?.text = numTextField?.GetDecimalValue().description
+                    numTextField?.text = numTextField?.GetDecimalValue()?.description
                 }
             }
             else {

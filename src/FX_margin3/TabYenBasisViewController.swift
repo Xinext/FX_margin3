@@ -46,43 +46,85 @@ class TabYenBasisViewController: FXMarginViewController {
     
     @objc override func textFieldEditingChanged(sender: UITextField) {
         
-        // 入力値を取得
-        let decRate = outletYenRateValueTextField.GetDecimalValue()
-        let decLeverage = outletLeverageValueTextField.GetDecimalValue()
-        let decLots = outletLotsValueTextField.GetDecimalValue() * 10000    // Convert to １万通貨
-        let decBalance = outletBalanceValueTextField.GetDecimalValue()
-        let decLossCutMargin = outletLossCutMarginValueTextField.GetDecimalValue() / 100  // % to calculation value
-        let decTradeType = outletTradeTypeTextField.GetDecimalValue()
-       
+        let margin = calcMaginMoney()
+        let lsm = calcLossCutMargin()
+        let lcrate = lsm.rate
+        let lcloss = lsm.loss
+
+        setterResultTextFields(margin: margin, lcrate: lcrate, lcloss: lcloss)
+    }
+    
+    // MARK: - private method
+    /// 必要証拠金の計算
+    private func calcMaginMoney() -> Decimal? {
+        
+        // 計算に必要な値を取得
+        guard let decRate = outletYenRateValueTextField.GetDecimalValue() else { return nil }
+        guard let decLeverage = outletLeverageValueTextField.GetDecimalValue() else { return nil }
+        guard let wkLots = outletLotsValueTextField.GetDecimalValue() else { return nil }
+        let decLots = wkLots * 10000    // Convert to １万通貨
         
         // 必要証拠金 = (現在レート * ロット数) / レバレッジ
-        let decMargin: Decimal?
-        if ( decLeverage != 0 ) {
-           decMargin = (decRate * decLots) / decLeverage
+        let decMargin = ((decRate * decLots) / decLeverage).rounded(0, roundingMode: .up)    // 必要証拠金は円単位で切り上げ
+
+        return decMargin
+    }
+    
+    /// ロスカットまで金額の計算
+    private func calcLossCutMargin() -> (range: Decimal?, rate: Decimal?, loss: Decimal?) {
+        
+        // 計算に必要な値を取得
+        guard let decRate = outletYenRateValueTextField.GetDecimalValue() else { return(nil,nil,nil) }
+        guard let decMarginMoney = calcMaginMoney() else { return(nil,nil,nil) }
+        guard let wkLots = outletLotsValueTextField.GetDecimalValue() else { return(nil,nil,nil) }
+        let decLots = wkLots * 10000    // Convert to １万通貨
+        guard let decBalance = outletBalanceValueTextField.GetDecimalValue() else { return(nil,nil,nil) }
+        guard let decLossCutMarginRatio = outletLossCutMarginValueTextField.GetDecimalValue() else { return(nil,nil,nil) }
+        let decTradeType = outletTradeTypeTextField.GetDecimalValue()
+        
+        // 口座残高チェック
+        if ( decMarginMoney > decBalance ) {    // 口座残高が必要証拠金より少ない場合は即時ロスカット扱いにする
+            return( nil, decRate, decBalance )
+        }
+        
+        // 各値の計算
+        let decLossCutRange = ((decBalance - ( decMarginMoney * (decLossCutMarginRatio / 100) )) / decLots) * decTradeType  // ロスカまでの値幅
+        let decLossCutRate = (decRate - decLossCutRange).rounded(3, roundingMode: .down)        // ロスカット時のレート (小数点第３以下切り捨て)
+        let decLossCutLoss = (abs(decLossCutRange) * decLots).rounded(0, roundingMode: .up)     // ロスカット時の損失
+        
+        return (decLossCutRange, decLossCutRate, decLossCutLoss)
+    }
+    
+    /// [setter]計算結果の表示
+    private func setterResultTextFields( margin: Decimal?, lcrate: Decimal?, lcloss: Decimal? ) {
+        
+        // 必要証拠金
+        if (margin != nil) {
+            outletMarginValueLabel.text = margin!.description
         }
         else {
-           decMargin = nil
+            outletMarginValueLabel.text = ""
         }
-        outletMarginValueLabel.text = decMargin?.description
         outletMarginValueLabel.FontSizeToFit()
         
-        if ( decMargin != nil && decLots != 0 ) {
-            
-            // ロスカットレート = 現在レート - (((口座残高 - (必要証拠金 * ロスカット維持率)) / ロット数) * 売り[-1]or買い[1])
-            let decLossCutMargin = ((decBalance - (decMargin! * decLossCutMargin)) / decLots) * decTradeType
-            let decLossCutRate = decRate - decLossCutMargin
-            outletLossCutRateValueLabel.text = decLossCutRate.description
-            outletLossCutRateValueLabel.FontSizeToFit()
-            
-            // ロスカット損失 = ABS(ロスカットレート) * ロット数
-            let decLossCutLoss = abs(decLossCutMargin) * decLots
-            outletLossCutLossValueLabel.text = decLossCutLoss.description
-            outletLossCutLossValueLabel.FontSizeToFit()
-            
+        // ロスカットレート
+        if ( lcrate != nil ) {
+            outletLossCutRateValueLabel.text = lcrate!.description
         }
         else {
             outletLossCutRateValueLabel.text = ""
+        }
+        outletLossCutRateValueLabel.FontSizeToFit()
+        
+        // ロスカット損失
+        if ( lcloss != nil ) {
+            outletLossCutLossValueLabel.text = lcloss!.description
+        }
+        else {
             outletLossCutLossValueLabel.text = ""
         }
+        outletLossCutLossValueLabel.FontSizeToFit()
+        
     }
+    
 }

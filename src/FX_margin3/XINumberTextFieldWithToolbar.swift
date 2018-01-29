@@ -129,18 +129,7 @@ class XINumberTextFieldWithToolbar: UITextField {
     // MARK: - Public method
     /// Get value in Decimal type
     /// - Returns: Dedimal type value
-    func GetDecimalValue() -> Decimal {
-        
-        let decValue = Decimal(string: self.text!)
-        
-        var resValue: Decimal = 0
-        if decValue != nil {
-            resValue = decValue!
-        }
-        else {
-            resValue = 0
-        }
-        
-        return resValue
+    func GetDecimalValue() -> Decimal? {
+        return Decimal(string: self.text!)
     }
 }
