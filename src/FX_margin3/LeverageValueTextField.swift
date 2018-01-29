@@ -21,9 +21,9 @@ class LeverageValueTextField: XINumberTextFieldWithToolbar {
         p500Button.tintColor = UIColor.red
         buttonArray.append(p500Button)
         
-        let gbpButton = UIBarButtonItem(title: "888倍", style: .plain, target: self, action: #selector(self.p888Button_TouchDown(sender:)))
-        gbpButton.tintColor = UIColor.red
-        buttonArray.append(p500Button)
+        let p888Button = UIBarButtonItem(title: "888倍", style: .plain, target: self, action: #selector(self.p888Button_TouchDown(sender:)))
+        p888Button.tintColor = UIColor.red
+        buttonArray.append(p888Button)
     }
     
     /**
