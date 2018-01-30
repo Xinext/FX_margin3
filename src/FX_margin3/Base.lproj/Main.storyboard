@@ -82,7 +82,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HzP-Xb-m2k">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="44.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レート　　" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7N-JE-QX8" userLabel="RateTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レート　　" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7N-JE-QX8" userLabel="CurrentRateTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="98.5" height="44.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,7 +102,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ha1-JC-ZcB" userLabel="RateValueTextField" customClass="YenRateValueTextField" customModule="FX_margin3" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ha1-JC-ZcB" userLabel="CurrentRateValueTextField" customClass="YenRateValueTextField" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108.5" y="0.0" width="162" height="44.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
@@ -127,7 +127,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="o3O-tt-lpA" userLabel="RateUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="o3O-tt-lpA" userLabel="CurrentRateUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="280.5" y="0.0" width="19.5" height="44.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -368,7 +368,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PVn-eg-ddo">
                                                         <rect key="frame" x="0.0" y="198" width="300" height="44.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="ofZ-lk-ygZ" userLabel="LossCutMarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="ofZ-lk-ygZ" userLabel="LCMarginRatioTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="98" height="44.5"/>
                                                                 <string key="text">ロスカット
 維持率</string>
@@ -390,7 +390,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="qpF-t7-G2N" userLabel="LossCutMarginValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="qpF-t7-G2N" userLabel="LCMarginRatioValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108" y="0.0" width="161.5" height="44.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
@@ -411,7 +411,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="％" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="5iG-tN-2AN" userLabel="LossCutMarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="％" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="5iG-tN-2AN" userLabel="LCMarginRatioUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="279.5" y="0.0" width="20.5" height="44.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -529,7 +529,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QZN-ve-rOS">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="51.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="必要証拠金" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="TUE-mx-x4g" userLabel="MarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="必要証拠金" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="TUE-mx-x4g" userLabel="InitialMarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="98.5" height="51.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -549,7 +549,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDw-oS-KoJ" userLabel="MarginValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDw-oS-KoJ" userLabel="InitialMarginValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108.5" y="0.0" width="162" height="51.5"/>
                                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.85882352941176465" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
@@ -579,7 +579,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="vWR-fL-3mq" userLabel="MarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="vWR-fL-3mq" userLabel="InitialMarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="280.5" y="0.0" width="19.5" height="51.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -625,7 +625,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bRi-o1-4GL">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="39"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="JQA-Gf-A5x" userLabel="LossCutRateTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="JQA-Gf-A5x" userLabel="LCRateTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="98" height="39"/>
                                                                 <string key="text">ロスカット
 レート</string>
@@ -647,7 +647,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1G-mf-yJt" userLabel="LossCutRateValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1G-mf-yJt" userLabel="LCRateValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108" y="0.0" width="162" height="39"/>
                                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.85882352941176465" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
@@ -677,7 +677,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="7vq-db-EAW" userLabel="LossCutRateUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="7vq-db-EAW" userLabel="LCRateUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="280" y="0.0" width="20" height="39"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -706,7 +706,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-Lq-mGM">
                                                         <rect key="frame" x="0.0" y="47" width="300" height="38.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Crw-si-t98" userLabel="LossCutLossTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Crw-si-t98" userLabel="LCLossTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.5" width="98" height="38.5"/>
                                                                 <string key="text">ロスカット
 損失</string>
@@ -728,7 +728,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np3-oS-LCS" userLabel="LossCutLossValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np3-oS-LCS" userLabel="LCLossValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108" y="0.5" width="162" height="38.5"/>
                                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.85882352941176465" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
@@ -758,7 +758,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="KRY-iB-BhU" userLabel="LossCutLossUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="KRY-iB-BhU" userLabel="LCLossUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="280" y="0.5" width="20" height="38.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -829,15 +829,15 @@
                     <tabBarItem key="tabBarItem" title="円" image="yen.png" id="PaN-sk-iYy"/>
                     <connections>
                         <outlet property="outletBalanceValueTextField" destination="ipf-qh-jDf" id="eRL-wN-sd9"/>
+                        <outlet property="outletCurrentRateValueTextField" destination="Ha1-JC-ZcB" id="Pir-Ds-ajq"/>
+                        <outlet property="outletInitialMarginValueLabel" destination="aDw-oS-KoJ" id="bRk-bJ-BkE"/>
+                        <outlet property="outletLCLossValueLabel" destination="Np3-oS-LCS" id="sVx-as-O4j"/>
+                        <outlet property="outletLCMarginRatioValueTextField" destination="qpF-t7-G2N" id="hOt-sb-8I1"/>
+                        <outlet property="outletLCRateValueLabel" destination="B1G-mf-yJt" id="8ZY-8v-yjS"/>
                         <outlet property="outletLeverageValueTextField" destination="veH-9d-sdX" id="HoX-PS-3Jm"/>
-                        <outlet property="outletLossCutLossValueLabel" destination="Np3-oS-LCS" id="sVx-as-O4j"/>
-                        <outlet property="outletLossCutMarginValueTextField" destination="qpF-t7-G2N" id="hOt-sb-8I1"/>
-                        <outlet property="outletLossCutRateValueLabel" destination="B1G-mf-yJt" id="8ZY-8v-yjS"/>
                         <outlet property="outletLotsValueTextField" destination="f6w-WH-9EY" id="iXL-W7-UKZ"/>
                         <outlet property="outletMainContentsView" destination="GXA-3s-Awe" id="hg6-dg-km2"/>
-                        <outlet property="outletMarginValueLabel" destination="aDw-oS-KoJ" id="bRk-bJ-BkE"/>
                         <outlet property="outletTradeTypeTextField" destination="oEb-NZ-VpE" id="cgl-6V-WZ1"/>
-                        <outlet property="outletYenRateValueTextField" destination="Ha1-JC-ZcB" id="Pir-Ds-ajq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilW-ZL-77a" userLabel="First Responder" sceneMemberID="firstResponder"/>
