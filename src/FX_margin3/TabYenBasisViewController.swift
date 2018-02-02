@@ -5,7 +5,7 @@
 
 import UIKit
 
-class TabYenBasisViewController: FXMarginViewController {
+class TabYenBasisViewController: MainContentsViewController {
 
     // MARK: - private variable
     private var firstAppear: Bool = false
@@ -24,7 +24,7 @@ class TabYenBasisViewController: FXMarginViewController {
     @IBOutlet weak var outletLCRateValueLabel: XIPaddingLabel!
     @IBOutlet weak var outletLCLossValueLabel: XIPaddingLabel!
 
-    // MARK: - override for FXMarginViewController
+    // MARK: - override for MainContentsViewController
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

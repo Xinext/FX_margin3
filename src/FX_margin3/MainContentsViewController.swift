@@ -5,7 +5,7 @@
 
 import UIKit
 
-class FXMarginViewController: UIViewController, UITextFieldDelegate  {
+class MainContentsViewController: UIViewController, UITextFieldDelegate  {
 
     // MARK: - const value
     let TRADETYPE_SHORT: Int = 0
@@ -169,6 +169,10 @@ class FXMarginViewController: UIViewController, UITextFieldDelegate  {
         let myBoundSize: CGSize = UIScreen.main.bounds.size
         let kbdLimit = (myBoundSize.height - keyboardScreenEndFrame.size.height)
 
+        
+        print("txtLimit=", txtLimit)
+        print("kbdLimit=", kbdLimit)
+        
         // 表示が重なる場合はずらす
         if txtLimit >= kbdLimit {
             print("txtLimit - kbdLimit=", txtLimit - kbdLimit)

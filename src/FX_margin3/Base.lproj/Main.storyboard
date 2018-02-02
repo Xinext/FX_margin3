@@ -890,7 +890,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ik5-dy-8cu" userLabel="DollarRateValueTextField" customClass="YenRateValueTextField" customModule="FX_margin3" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ik5-dy-8cu" userLabel="DollarRateValueTextField" customClass="DollarRateValueTextField" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108.5" y="0.0" width="162" height="39.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
@@ -942,10 +942,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K7U-oS-GoB">
-                                                        <rect key="frame" x="0.0" y="44.5" width="300" height="39.5"/>
+                                                        <rect key="frame" x="0.0" y="44.5" width="300" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円レート　" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BZw-8L-tM5" userLabel="YenRateTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="39.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="39"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -964,8 +964,8 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="dL6-7k-20H" userLabel="YenRateValueTextField" customClass="YenRateValueTextField" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="39.5"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="dL6-7k-20H" userLabel="YenRateValueTextField" customClass="DollarYenRateValueTextField" customModule="FX_margin3" customModuleProvider="target">
+                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="39"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -990,7 +990,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="uCD-W3-U2h" userLabel="YenRateUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="39.5"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="39"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1016,10 +1016,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qwb-gT-jBs">
-                                                        <rect key="frame" x="0.0" y="89" width="300" height="39"/>
+                                                        <rect key="frame" x="0.0" y="88.5" width="300" height="39.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レバレッジ" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="6ap-kO-dd6" userLabel="LeverageTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="39"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="39.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1039,7 +1039,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="1Sq-ju-IuE" userLabel="LeverageValueTextField" customClass="LeverageValueTextField" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="39"/>
+                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="39.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1060,7 +1060,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="倍" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="GwB-il-35E" userLabel="LeverageUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="39"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="39.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1228,10 +1228,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qnS-8m-Lun">
-                                                        <rect key="frame" x="0.0" y="222" width="300" height="39.5"/>
+                                                        <rect key="frame" x="0.0" y="222" width="300" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="QwA-27-yzt" userLabel="LCMarginRatioTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="39.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="39"/>
                                                                 <string key="text">ロスカット
 維持率</string>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
@@ -1253,7 +1253,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qd7-fX-Xqb" userLabel="LCMarginRatioValueTextField" customClass="XINumberTextFieldWithToolbar" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="39.5"/>
+                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="39"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1274,7 +1274,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="％" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="4H2-vw-aFa" userLabel="LCMarginRatioUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="39.5"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="39"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1300,10 +1300,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bh1-tb-S1z">
-                                                        <rect key="frame" x="0.0" y="266.5" width="300" height="39"/>
+                                                        <rect key="frame" x="0.0" y="266" width="300" height="39.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="取引種別　" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="Jsa-K6-b52" userLabel="TradeTypeTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="39"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="39.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1323,7 +1323,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="b2d-f5-d46" userLabel="TradeTypeTextField" customClass="TradeTypePickerTextField" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="39"/>
+                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="39.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1346,7 +1346,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGU-3m-Db3" userLabel="TradeTypeUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="39"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="39.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1386,13 +1386,13 @@
                                         <rect key="frame" x="0.0" y="326" width="320" height="57.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Sij-ON-R5j">
-                                                <rect key="frame" x="10" y="10" width="300" height="37.5"/>
+                                                <rect key="frame" x="10" y="5" width="300" height="47.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w8b-kL-efg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="37.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="47.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="必要証拠金" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="SKd-Np-dKn" userLabel="InitialMarginTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="37.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="47.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1412,7 +1412,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSq-sJ-2s3" userLabel="InitialMarginValueLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="37.5"/>
+                                                                <rect key="frame" x="108.5" y="0.0" width="162" height="47.5"/>
                                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.85882352939999995" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                                                 <nil key="textColor"/>
@@ -1442,7 +1442,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="hMV-lF-wvh" userLabel="InitialMarginUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
-                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="37.5"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="19.5" height="47.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1473,8 +1473,8 @@
                                         <color key="backgroundColor" red="0.17254901959999999" green="0.29411764709999999" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="Sij-ON-R5j" firstAttribute="leading" secondItem="dJS-CK-HHJ" secondAttribute="leading" constant="10" id="Etg-Nu-ZYK"/>
-                                            <constraint firstItem="Sij-ON-R5j" firstAttribute="top" secondItem="dJS-CK-HHJ" secondAttribute="top" constant="10" id="NeY-J1-cGx"/>
-                                            <constraint firstAttribute="bottom" secondItem="Sij-ON-R5j" secondAttribute="bottom" constant="10" id="dv3-MU-VPM"/>
+                                            <constraint firstItem="Sij-ON-R5j" firstAttribute="top" secondItem="dJS-CK-HHJ" secondAttribute="top" constant="5" id="NeY-J1-cGx"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sij-ON-R5j" secondAttribute="bottom" constant="5" id="dv3-MU-VPM"/>
                                             <constraint firstAttribute="trailing" secondItem="Sij-ON-R5j" secondAttribute="trailing" constant="10" id="rfb-yE-CXm"/>
                                         </constraints>
                                     </view>
@@ -1539,7 +1539,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="5ZU-zF-FPQ" userLabel="LCRateUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="＄" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="5ZU-zF-FPQ" userLabel="LCRateUnitLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="280.5" y="0.0" width="19.5" height="34"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1688,6 +1688,19 @@
                         <viewLayoutGuide key="safeArea" id="f8J-Vj-crx"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ドル" image="doller.png" id="AyY-eB-hcC"/>
+                    <connections>
+                        <outlet property="outletBalanceValueTextField" destination="zbp-En-CS4" id="6Tq-2C-UPo"/>
+                        <outlet property="outletDollarRateValueTextField" destination="Ik5-dy-8cu" id="mjF-65-gGr"/>
+                        <outlet property="outletInitialMarginValueLabel" destination="RSq-sJ-2s3" id="6D8-A8-sP5"/>
+                        <outlet property="outletLCLossValueLabel" destination="PcX-jF-RHu" id="i89-CU-Wht"/>
+                        <outlet property="outletLCMarginRatioValueTextField" destination="Qd7-fX-Xqb" id="0fG-dU-ZnJ"/>
+                        <outlet property="outletLCRateValueLabel" destination="0MY-p2-G6O" id="12s-b5-lcU"/>
+                        <outlet property="outletLeverageValueTextField" destination="1Sq-ju-IuE" id="bD5-Ee-NnL"/>
+                        <outlet property="outletLotsValueTextField" destination="ZbQ-BR-roX" id="p61-yn-bPN"/>
+                        <outlet property="outletMainContentsView" destination="Q5I-sf-81T" id="bFy-O2-Wdi"/>
+                        <outlet property="outletTradeTypeTextField" destination="b2d-f5-d46" id="RM2-PJ-OgD"/>
+                        <outlet property="outletYenRateValueTextField" destination="dL6-7k-20H" id="Mk8-4S-wfs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcb-KH-8HY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

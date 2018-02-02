@@ -5,101 +5,139 @@
 
 import UIKit
 
-class TabDollarBasisViewController: UIViewController  ,UITextFieldDelegate, UIScrollViewDelegate {
+class TabDollarBasisViewController: MainContentsViewController {
     
-    var txtActiveField = UITextField()
-    var scrollFormer:CGFloat! = nil
-    let scrollViewsample = UIScrollView()
+    // MARK: - private variable
+    private var firstAppear: Bool = false
+    
+    // MARK: - IBOutlet
+    @IBOutlet weak var outletMainContentsView: UIView!
+    
+    @IBOutlet weak var outletDollarRateValueTextField: DollarRateValueTextField!
+    @IBOutlet weak var outletYenRateValueTextField: DollarYenRateValueTextField!
+    @IBOutlet weak var outletLeverageValueTextField: LeverageValueTextField!
+    @IBOutlet weak var outletLotsValueTextField: XINumberTextFieldWithToolbar!
+    @IBOutlet weak var outletBalanceValueTextField: XINumberTextFieldWithToolbar!
+    @IBOutlet weak var outletLCMarginRatioValueTextField: XINumberTextFieldWithToolbar!
+    @IBOutlet weak var outletTradeTypeTextField: TradeTypePickerTextField!
+    @IBOutlet weak var outletInitialMarginValueLabel: XIPaddingLabel!
+    @IBOutlet weak var outletLCRateValueLabel: XIPaddingLabel!
+    @IBOutlet weak var outletLCLossValueLabel: XIPaddingLabel!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blue
-        
-        let mainViewFrame = UIScreen.main.bounds
-        
-        scrollViewsample.frame = mainViewFrame
-        scrollViewsample.contentSize = CGSize(width:mainViewFrame.size.width , height:mainViewFrame.height + 150)
-        let sampletextFile = UITextField()
-        sampletextFile.delegate = self
-        sampletextFile.text = "パターン2"
-        sampletextFile.borderStyle = UITextBorderStyle.roundedRect
-        sampletextFile.frame.size.width = mainViewFrame.size.width/2
-        let rec = CGRect(x: mainViewFrame.midX - sampletextFile.frame.size.width/2, y: 500, width:mainViewFrame.size.width/2 , height:  40.0)
-        sampletextFile.frame = rec
-        self.view.addSubview(scrollViewsample)
-        scrollViewsample.addSubview(sampletextFile)
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    // MARK: - override for MainContentsViewController
     override func viewWillAppear(_ animated: Bool) {
-        
         super.viewWillAppear(animated)
         
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(self.handleKeyboardWillShowNotification(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(self.handleKeyboardWillHideNotification(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
-        return true
-    }
-    
-    
-    
-    //UITextFieldが編集された直後に呼ばれる.
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        
-        //編集されたテキストフィールドを格納しておく
-        txtActiveField = textField
-        return true
-    }
-    
-    @objc func handleKeyboardWillShowNotification(_ notification: Notification) {
-        
-        
-        let userInfo = notification.userInfo!
-        //キーボードの大きさ調べる
-        let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        let myBoundSize: CGSize = UIScreen.main.bounds.size
-        
-        let scrollvalue = scrollViewsample.contentOffset.y
-        scrollFormer = scrollViewsample.contentOffset.y
-        
-        //入力したテキストフィールドのy軸と高さと少し余白を足してテキストフィールドのマックスy値と少し余白のy軸をとる
-        let txtLimit = txtActiveField.frame.maxY + 8.0
-        let txtLimit1 = txtActiveField.frame.maxY + 8.0 - scrollvalue
-        
-        //現在のselfViewの高さから、キーボードの高さを引いて残りの幅の高さをみるy軸をみる
-        let kbdLimit = myBoundSize.height - keyboardScreenEndFrame.size.height
-        
-        
-        print("テキストフィールドの下辺：(\(txtLimit))")
-        print("キーボードの上辺：(\(kbdLimit))")
-        
-        //キーボードよりテキストフィールドのy軸が大きかったらキーボードにかかっている状態。スクロールビューをその分移動させる。
-        if txtLimit1 >= kbdLimit {
-            scrollViewsample.contentOffset.y = txtLimit - kbdLimit
+        // 最初に表示される時の処理
+        if (firstAppear != true) {
+            outletMainContentsView.isHidden = true  // メインコンテンツの準備ができるまで非表示
         }
     }
     
-    @objc func handleKeyboardWillHideNotification(_ notification: Notification) {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        
-        //スクロールしてある位置に戻す
-        scrollViewsample.contentOffset.y = scrollFormer
+        // 最初に表示される時の処理
+        if (firstAppear != true) {
+            outletMainContentsView.isHidden = false // メインコンテンツの準備が完了したので表示
+            firstAppear = true
+        }
     }
     
+    @objc override func textFieldEditingChanged(sender: UITextField) {
+        
+        let margin = calcInitialMargin()
+        let lsm = calcLossCutMargin()
+        let lcrate = lsm.dollarRate
+        let lcloss = lsm.yenLoss
+        
+        setterResultTextFields(margin: margin.yen, lcrate: lcrate, lcloss: lcloss)
+    }
     
+    // MARK: - private method
+    /// 必要証拠金の計算
+    private func calcInitialMargin() -> ( dollar: Decimal?, yen: Decimal? ) {
+        
+        // 計算に必要な値を取得
+        guard let decDollarRate = outletDollarRateValueTextField.GetDecimalValue() else { return (nil,nil) }
+        guard let decYenRate = outletYenRateValueTextField.GetDecimalValue() else { return (nil,nil) }
+        guard let decLeverage = outletLeverageValueTextField.GetDecimalValue() else { return (nil,nil) }
+        guard let wkLots = outletLotsValueTextField.GetDecimalValue() else { return (nil,nil) }
+        let decLots = wkLots * 10000    // Convert to １万通貨
+        
+        // 必要証拠金[$] = (ドルレート * ロット数) / レバレッジ
+        let decDollarInitialMargin = ((decDollarRate  * decLots) / decLeverage).rounded(5, roundingMode: .up)    // 必要証拠金は第６位で切り上げ（小数点以下５位まで表示）
+        // 必要証拠金[円]へ変換
+        let decYenInitialMargin = (decDollarInitialMargin * decYenRate).rounded(0, roundingMode: .up)
+        
+        return (decDollarInitialMargin, decYenInitialMargin)
+    }
+    
+    /// ロスカットまで金額の計算
+    private func calcLossCutMargin() -> (dollarRange: Decimal?, dollarRate: Decimal?, yenRate: Decimal?, dollarLoss: Decimal?, yenLoss: Decimal?) {
+        
+        // 計算に必要な値を取得
+        guard let decDollarRate = outletDollarRateValueTextField.GetDecimalValue() else { return(nil,nil,nil,nil,nil) }
+        guard let decYenRate = outletYenRateValueTextField.GetDecimalValue() else { return (nil,nil,nil,nil,nil) }
+        let decInitialMargin = calcInitialMargin()
+        guard let decDollarInitialMargin = decInitialMargin.dollar else { return(nil,nil,nil,nil,nil) }
+        guard let decYenInitialMargin = decInitialMargin.yen else { return(nil,nil,nil,nil,nil) }
+        guard let wkLots = outletLotsValueTextField.GetDecimalValue() else { return(nil,nil,nil,nil,nil) }
+        let decLots = wkLots * 10000    // Convert to １万通貨
+        guard let decYenBalance = outletBalanceValueTextField.GetDecimalValue() else { return(nil,nil,nil,nil,nil) }
+        let decDollarBalance = decYenBalance / decYenRate
+        guard let decLCMarginRatio = outletLCMarginRatioValueTextField.GetDecimalValue() else { return(nil,nil,nil,nil,nil) }
+        let decTradeType = outletTradeTypeTextField.GetDecimalValue()
+        
+        // 口座残高チェック
+        if ( decDollarInitialMargin > decDollarBalance ) {    // 口座残高が必要証拠金より少ない場合は即時ロスカット扱いにする
+            return( nil, decDollarInitialMargin, decYenInitialMargin, decDollarBalance, decYenBalance )
+        }
+        
+        // 各値の計算
+        let decDollarLCRange = ((decDollarBalance - ( decDollarInitialMargin * (decLCMarginRatio / 100) )) / decLots) * decTradeType  // [ドル建] ロスカまでの値幅
+        let decDollarLCRate = (decDollarRate - decDollarLCRange).rounded(5, roundingMode: .down)        // [ドル建] ロスカット時のレート (小数点第５以下切り捨て)
+        let decDollarLCLoss = (abs(decDollarLCRange) * decLots).rounded(5, roundingMode: .up)           // [ドル建] ロスカット時の損失
+        
+        let decYenLCRate = (decDollarLCRate * decYenRate).rounded(0, roundingMode: .down)       // [円建] ロスカット時のレート (小数点以下切り捨て)
+        let decYenLCLoss = (decDollarLCLoss * decYenRate).rounded(0, roundingMode: .up)         // [円建] ロスカット時の損失
+        
+        
+        return (decDollarLCRange, decDollarLCRate, decYenLCRate, decDollarLCLoss, decYenLCLoss)
+    }
+    
+    /// [setter]計算結果の表示
+    private func setterResultTextFields( margin: Decimal?, lcrate: Decimal?, lcloss: Decimal? ) {
+        
+        // 必要証拠金
+        if (margin != nil) {
+            outletInitialMarginValueLabel.text = margin!.description
+        }
+        else {
+            outletInitialMarginValueLabel.text = ""
+        }
+        outletInitialMarginValueLabel.FontSizeToFit()
+        
+        // ロスカットレート
+        if ( lcrate != nil ) {
+            outletLCRateValueLabel.text = lcrate!.description
+        }
+        else {
+            outletLCRateValueLabel.text = ""
+        }
+        outletLCRateValueLabel.FontSizeToFit()
+        
+        // ロスカット損失
+        if ( lcloss != nil ) {
+            outletLCLossValueLabel.text = lcloss!.description
+        }
+        else {
+            outletLCLossValueLabel.text = ""
+        }
+        outletLCLossValueLabel.FontSizeToFit()
+        
+    }
 }
 
 
