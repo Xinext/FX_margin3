@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SkB-xi-t1c">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="Ixc-78-IxO" kind="embed" id="TxX-QC-Zc0"/>
+                                    <segue destination="Ixc-78-IxO" kind="embed" id="CEF-42-667"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HU8-X9-X6H" userLabel="ADBannerView">
@@ -55,6 +55,140 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-118.125" y="593.66197183098598"/>
+        </scene>
+        <!--Terms Of Use View Controller-->
+        <scene sceneID="5Qg-6U-jB7">
+            <objects>
+                <viewController id="SkB-xi-t1c" customClass="TermsOfUseViewController" customModule="FX_margin3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZIO-qK-EZv" userLabel="TopView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cu-ux-eH0" userLabel="MainContentsView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SiB-mG-j1e">
+                                        <rect key="frame" x="20" y="20" width="280" height="508"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利用規約" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="DoY-tI-RH9" userLabel="TOSTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="39"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                                <color key="textColor" red="0.78823529411764703" green="0.22745098039215686" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="nHx-H3-kMg" userLabel="TOSTextLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="49" width="280" height="390.5"/>
+                                                <color key="backgroundColor" red="0.2274509804" green="0.3803921569" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <string key="text">必要証拠金及びロスカットの基準は、各取引業者によって異なる場合があります。つきましては、取引ルールに関するお問い合わせなどは、直接該当する業者へ行って頂きます様にお願い致します。
+
+当アプリケーションの使用は、利用者の責任において行うものとします。内容につきましては正確性・妥当性・有用性について保証するものではありません。使用にあたり、不利益・損害・実績が得られない等のことがありましても一切の責任を負い兼ねますのでご了承下さい。</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="48"/>
+                                                <color key="textColor" red="0.78823529411764703" green="0.80784313725490198" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.78823529410000004" green="0.80784313730000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkJ-us-Zn9" userLabel="TOSAgreementButton" customClass="XIPaddingButton" customModule="FX_margin3" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="449.5" width="280" height="58.5"/>
+                                                <color key="backgroundColor" red="0.5725490196078431" green="0.63137254901960782" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
+                                                <state key="normal" title="利用規約に同意する">
+                                                    <color key="titleColor" red="0.78823529410000004" green="0.2274509804" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingRight">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="PaddingBottom">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="SkJ-us-Zn9" id="13z-W0-DPu">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DoY-tI-RH9" firstAttribute="height" secondItem="nHx-H3-kMg" secondAttribute="height" multiplier="0.1" id="9o6-Gj-oHl"/>
+                                            <constraint firstItem="SkJ-us-Zn9" firstAttribute="height" secondItem="nHx-H3-kMg" secondAttribute="height" multiplier="0.15" id="DFe-C1-wLS"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SiB-mG-j1e" firstAttribute="top" secondItem="1Cu-ux-eH0" secondAttribute="top" constant="20" id="0sT-bb-XdL"/>
+                                    <constraint firstItem="SiB-mG-j1e" firstAttribute="leading" secondItem="1Cu-ux-eH0" secondAttribute="leading" constant="20" id="7Ho-yO-zzF"/>
+                                    <constraint firstAttribute="bottom" secondItem="SiB-mG-j1e" secondAttribute="bottom" constant="20" id="8w8-6T-556"/>
+                                    <constraint firstAttribute="trailing" secondItem="SiB-mG-j1e" secondAttribute="trailing" constant="20" id="EUO-SL-ibP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Cu-ux-eH0" firstAttribute="top" secondItem="eLX-b7-pKQ" secondAttribute="top" id="Pgp-IX-qsW"/>
+                            <constraint firstItem="1Cu-ux-eH0" firstAttribute="leading" secondItem="eLX-b7-pKQ" secondAttribute="leading" id="ZZB-yC-T9b"/>
+                            <constraint firstItem="1Cu-ux-eH0" firstAttribute="trailing" secondItem="eLX-b7-pKQ" secondAttribute="trailing" id="usE-7K-NaO"/>
+                            <constraint firstItem="1Cu-ux-eH0" firstAttribute="bottom" secondItem="eLX-b7-pKQ" secondAttribute="bottom" id="vUq-BB-vET"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eLX-b7-pKQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="outletMainCOntentsView" destination="1Cu-ux-eH0" id="BjQ-oP-zsA"/>
+                        <outlet property="outletTOSAgreementButton" destination="SkJ-us-Zn9" id="1xh-n2-WYH"/>
+                        <outlet property="outletTOSTextLabel" destination="nHx-H3-kMg" id="XYM-46-BuH"/>
+                        <outlet property="outletTOSTitleLabel" destination="DoY-tI-RH9" id="uKP-20-yTO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QjY-hg-cfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1106.25" y="636.97183098591552"/>
         </scene>
         <!--円-->
         <scene sceneID="pCD-Nj-aC7">

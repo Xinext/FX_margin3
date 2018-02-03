@@ -18,6 +18,8 @@
 		410FE4F81FFCAF9B008DB2AE /* XICommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FE4F71FFCAF9A008DB2AE /* XICommonUtility.swift */; };
 		413893E820215EAF001A8CD6 /* DollarRateValueTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413893E720215EAF001A8CD6 /* DollarRateValueTextField.swift */; };
 		413893EA20217530001A8CD6 /* DollarYenRateValueTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413893E920217530001A8CD6 /* DollarYenRateValueTextField.swift */; };
+		4142F59620242F6B00A317EB /* TermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4142F59520242F6B00A317EB /* TermsOfUseViewController.swift */; };
+		4142F59820244C5A00A317EB /* XIPaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4142F59720244C5900A317EB /* XIPaddingButton.swift */; };
 		41440D9E20086538005E846B /* XINumberTextFieldWithToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41440D9D20086538005E846B /* XINumberTextFieldWithToolbar.swift */; };
 		414AEC23200DB98F00D0AB96 /* doller.png in Resources */ = {isa = PBXBuildFile; fileRef = 414AEC22200DB98F00D0AB96 /* doller.png */; };
 		414AEC25200DBD4600D0AB96 /* doller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 414AEC24200DBD4300D0AB96 /* doller@2x.png */; };
@@ -46,6 +48,8 @@
 		410FE4F71FFCAF9A008DB2AE /* XICommonUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XICommonUtility.swift; sourceTree = "<group>"; };
 		413893E720215EAF001A8CD6 /* DollarRateValueTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarRateValueTextField.swift; sourceTree = "<group>"; };
 		413893E920217530001A8CD6 /* DollarYenRateValueTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarYenRateValueTextField.swift; sourceTree = "<group>"; };
+		4142F59520242F6B00A317EB /* TermsOfUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseViewController.swift; sourceTree = "<group>"; };
+		4142F59720244C5900A317EB /* XIPaddingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIPaddingButton.swift; sourceTree = "<group>"; };
 		41440D9D20086538005E846B /* XINumberTextFieldWithToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XINumberTextFieldWithToolbar.swift; sourceTree = "<group>"; };
 		414AEC22200DB98F00D0AB96 /* doller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doller.png; sourceTree = "<group>"; };
 		414AEC24200DBD4300D0AB96 /* doller@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doller@2x.png"; sourceTree = "<group>"; };
@@ -107,11 +111,14 @@
 				41A5081720098EC800878871 /* MainContentsViewController.swift */,
 				410FE4F31FFCA404008DB2AE /* TabYenBasisViewController.swift */,
 				417C9B5B1FFDACF100D4C1CB /* TabDollarBasisViewController.swift */,
+				4142F59520242F6B00A317EB /* TermsOfUseViewController.swift */,
 				4102B327200315F000AE2039 /* YenRateValueTextField.swift */,
 				413893E720215EAF001A8CD6 /* DollarRateValueTextField.swift */,
+				413893E920217530001A8CD6 /* DollarYenRateValueTextField.swift */,
 				416346752015A85600812388 /* LeverageValueTextField.swift */,
 				41A5081D2009ED7C00878871 /* TradeTypePickerTextField.swift */,
 				410FE4F51FFCAF19008DB2AE /* XIPaddingLabel.swift */,
+				4142F59720244C5900A317EB /* XIPaddingButton.swift */,
 				41440D9D20086538005E846B /* XINumberTextFieldWithToolbar.swift */,
 				410FE4F71FFCAF9A008DB2AE /* XICommonUtility.swift */,
 				419F17EE201849C8004D6AB9 /* CurrencyRateUtility.swift */,
@@ -123,7 +130,6 @@
 				414AEC26200DBD4C00D0AB96 /* yen.png */,
 				414AEC27200DBD4C00D0AB96 /* yen@2x.png */,
 				41AB29BB201C20710009E61C /* Localizable.strings */,
-				413893E920217530001A8CD6 /* DollarYenRateValueTextField.swift */,
 			);
 			path = FX_margin3;
 			sourceTree = "<group>";
@@ -288,6 +294,8 @@
 				418E18671FF663E400216CCC /* AppDelegate.swift in Sources */,
 				419F17EF201849C8004D6AB9 /* CurrencyRateUtility.swift in Sources */,
 				416346762015A85600812388 /* LeverageValueTextField.swift in Sources */,
+				4142F59620242F6B00A317EB /* TermsOfUseViewController.swift in Sources */,
+				4142F59820244C5A00A317EB /* XIPaddingButton.swift in Sources */,
 				410FE4F61FFCAF19008DB2AE /* XIPaddingLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
