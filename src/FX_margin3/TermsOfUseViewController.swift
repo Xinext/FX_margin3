@@ -41,6 +41,7 @@ class TermsOfUseViewController: UIViewController {
         // 最初に表示される時の処理
         if (firstAppear != true) {
             
+            outletTOSTitleLabel.FontSizeToFit()
             outletTOSAgreementButton.FontSizeToFit()
             
             outletMainCOntentsView.isHidden = false // メインコンテンツの準備が完了したので表示
