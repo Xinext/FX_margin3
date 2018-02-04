@@ -72,8 +72,9 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利用規約" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="DoY-tI-RH9" userLabel="TOSTitleLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="39"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
-                                                <color key="textColor" red="0.78823529411764703" green="0.22745098039215686" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.78823529410000004" green="0.80784313730000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="PaddingTop">
@@ -88,11 +89,20 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="PaddingLeft">
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.78823529410000004" green="0.80784313730000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="nHx-H3-kMg" userLabel="TOSTextLabel" customClass="XIPaddingLabel" customModule="FX_margin3" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="49" width="280" height="390.5"/>
-                                                <color key="backgroundColor" red="0.2274509804" green="0.3803921569" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <string key="text">必要証拠金及びロスカットの基準は、各取引業者によって異なる場合があります。つきましては、取引ルールに関するお問い合わせなどは、直接該当する業者へ行って頂きます様にお願い致します。
 
@@ -114,7 +124,7 @@
                                                         <color key="value" red="0.78823529410000004" green="0.80784313730000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="5"/>
@@ -149,19 +159,18 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="SkJ-us-Zn9" id="13z-W0-DPu">
-                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                    </segue>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="13z-W0-DPu"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="backgroundColor" red="0.22800344228744507" green="0.37920394539833069" blue="0.30746734142303467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="DoY-tI-RH9" firstAttribute="height" secondItem="nHx-H3-kMg" secondAttribute="height" multiplier="0.1" id="9o6-Gj-oHl"/>
                                             <constraint firstItem="SkJ-us-Zn9" firstAttribute="height" secondItem="nHx-H3-kMg" secondAttribute="height" multiplier="0.15" id="DFe-C1-wLS"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.3803921569" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="SiB-mG-j1e" firstAttribute="top" secondItem="1Cu-ux-eH0" secondAttribute="top" constant="20" id="0sT-bb-XdL"/>
                                     <constraint firstItem="SiB-mG-j1e" firstAttribute="leading" secondItem="1Cu-ux-eH0" secondAttribute="leading" constant="20" id="7Ho-yO-zzF"/>
@@ -597,7 +606,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-NZ-VpE" userLabel="TradeTypeTextField" customClass="TradeTypePickerTextField" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108.5" y="0.0" width="162" height="44.5"/>
                                                                 <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
@@ -1459,7 +1468,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="b2d-f5-d46" userLabel="TradeTypeTextField" customClass="TradeTypePickerTextField" customModule="FX_margin3" customModuleProvider="target">
                                                                 <rect key="frame" x="108.5" y="0.0" width="162" height="39.5"/>
                                                                 <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="NumberDigit">
