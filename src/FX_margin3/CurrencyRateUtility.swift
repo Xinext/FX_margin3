@@ -26,32 +26,40 @@ class CurrencyRateUtility: NSObject {
 
     static func GetCrossYenRate(pair: JPY_PAIR) -> Decimal? {
 
-        let url: URL = URL(string: "https://finance.google.com/finance/converter?a=1&from=" + pair.rawValue + "&to=JPY")!
+        let pair = pair.rawValue + "_JPY"
+        let url: URL = URL(string: "https://free.currencyconverterapi.com/api/v3/convert?q=" + pair + "&compact=ultra")!
         
-        guard let data = try? Data(contentsOf: url) else { return nil }
-        guard let htmlSting = String(data: data, encoding: .iso2022JP ) else { return nil }
-        
-        var ans: [String] = []
-        if htmlSting.pregMatche(pattern: "<span class=bld>((?:.|\n)+?)JPY</span>", matches: &ans) != true {
-            return nil
+        guard let price_data = try? Data(contentsOf: url) else { return nil }
+
+        var rtn_price: Decimal? = nil
+        do {
+            let price_json = try JSONSerialization.jsonObject(with: price_data, options: JSONSerialization.ReadingOptions.allowFragments)
+            let price_dct = price_json as! NSDictionary
+            rtn_price = Decimal(price_dct[pair] as! Double).rounded(3)
+        } catch {
+            rtn_price = nil
         }
         
-        return Decimal(string: ans[1])
+        return rtn_price
     }
     
     static func GetCrossDollarRate(pair: USD_PAIR) -> Decimal? {
         
-        let url: URL = URL(string: "https://finance.google.com/finance/converter?a=1&from=" + pair.rawValue + "&to=USD")!
+        let pair = pair.rawValue + "_USD"
+        let url: URL = URL(string: "https://free.currencyconverterapi.com/api/v3/convert?q=" + pair + "&compact=ultra")!
         
-        guard let data = try? Data(contentsOf: url) else { return nil }
-        guard let htmlSting = String(data: data, encoding: .iso2022JP ) else { return nil }
+        guard let price_data = try? Data(contentsOf: url) else { return nil }
         
-        var ans: [String] = []
-        if htmlSting.pregMatche(pattern: "<span class=bld>((?:.|\n)+?)USD</span>", matches: &ans) != true {
-            return nil
+        var rtn_price: Decimal? = nil
+        do {
+            let price_json = try JSONSerialization.jsonObject(with: price_data, options: JSONSerialization.ReadingOptions.allowFragments)
+            let price_dct = price_json as! NSDictionary
+            rtn_price = Decimal(price_dct[pair] as! Double).rounded(5)
+        } catch {
+            rtn_price = nil
         }
         
-        return Decimal(string: ans[1])
+        return rtn_price
     }
  }
 
