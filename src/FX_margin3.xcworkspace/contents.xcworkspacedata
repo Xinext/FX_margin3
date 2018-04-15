@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:FX_margin3.xcodeproj">
+      location = "group:/Volumes/SD/Development/Projects/xinext/iOS/FX_margin/FX_margin3/src/FXmargin.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

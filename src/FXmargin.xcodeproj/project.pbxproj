@@ -57,7 +57,7 @@
 		414AEC27200DBD4C00D0AB96 /* yen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yen@2x.png"; sourceTree = "<group>"; };
 		416346752015A85600812388 /* LeverageValueTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeverageValueTextField.swift; sourceTree = "<group>"; };
 		417C9B5B1FFDACF100D4C1CB /* TabDollarBasisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabDollarBasisViewController.swift; sourceTree = "<group>"; };
-		418E18631FF663E300216CCC /* FX_margin3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FX_margin3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		418E18631FF663E300216CCC /* FXmargin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FXmargin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418E18661FF663E400216CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		418E186B1FF663E400216CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		418E186D1FF663E400216CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		418E18641FF663E300216CCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				418E18631FF663E300216CCC /* FX_margin3.app */,
+				418E18631FF663E300216CCC /* FXmargin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,9 +154,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		418E18621FF663E300216CCC /* FX_margin3 */ = {
+		418E18621FF663E300216CCC /* FXmargin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 418E18751FF663E400216CCC /* Build configuration list for PBXNativeTarget "FX_margin3" */;
+			buildConfigurationList = 418E18751FF663E400216CCC /* Build configuration list for PBXNativeTarget "FXmargin" */;
 			buildPhases = (
 				C78295FC0CBEA6494EFB622D /* [CP] Check Pods Manifest.lock */,
 				418E185F1FF663E300216CCC /* Sources */,
@@ -169,9 +169,9 @@
 			);
 			dependencies = (
 			);
-			name = FX_margin3;
+			name = FXmargin;
 			productName = FX_margin3;
-			productReference = 418E18631FF663E300216CCC /* FX_margin3.app */;
+			productReference = 418E18631FF663E300216CCC /* FXmargin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -181,16 +181,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = xinext;
 				TargetAttributes = {
 					418E18621FF663E300216CCC = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
-			buildConfigurationList = 418E185E1FF663E300216CCC /* Build configuration list for PBXProject "FX_margin3" */;
+			buildConfigurationList = 418E185E1FF663E300216CCC /* Build configuration list for PBXProject "FXmargin" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -203,7 +203,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				418E18621FF663E300216CCC /* FX_margin3 */,
+				418E18621FF663E300216CCC /* FXmargin */,
 			);
 		};
 /* End PBXProject section */
@@ -328,6 +328,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -335,6 +336,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -385,6 +387,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -392,6 +395,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -426,13 +430,17 @@
 			baseConfigurationReference = 8D2B301AA6A92F2028DA2DB1 /* Pods-FX_margin3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6N89BHW7Q5;
 				INFOPLIST_FILE = FX_margin3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xinext.FXmargin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0819aad2-0f84-4898-a7da-68939837a4e8";
+				PROVISIONING_PROFILE_SPECIFIER = FXmargin_dev;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,13 +451,17 @@
 			baseConfigurationReference = 1DAA64179B4ADCFF09188E71 /* Pods-FX_margin3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6N89BHW7Q5;
 				INFOPLIST_FILE = FX_margin3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xinext.FXmargin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5252e479-33be-4cc3-9467-3c7c922eeb6e";
+				PROVISIONING_PROFILE_SPECIFIER = FXmargin_dist;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,7 +470,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		418E185E1FF663E300216CCC /* Build configuration list for PBXProject "FX_margin3" */ = {
+		418E185E1FF663E300216CCC /* Build configuration list for PBXProject "FXmargin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				418E18731FF663E400216CCC /* Debug */,
@@ -467,7 +479,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		418E18751FF663E400216CCC /* Build configuration list for PBXNativeTarget "FX_margin3" */ = {
+		418E18751FF663E400216CCC /* Build configuration list for PBXNativeTarget "FXmargin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				418E18761FF663E400216CCC /* Debug */,
