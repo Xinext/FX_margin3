@@ -123,17 +123,17 @@ class MainContentsViewController: UIViewController, UITextFieldDelegate  {
         for textField in allTextFields
         {
             textField.font = UIFont.boldSystemFont(ofSize: 46)
-            var widthOfText: CGFloat = textField.text!.size(withAttributes: [NSAttributedStringKey.font: textField.font!]).width
+            var widthOfText: CGFloat = textField.text!.size(withAttributes: [NSAttributedString.Key.font: textField.font!]).width
             let widthOfFrame: CGFloat = textField.frame.size.width
             
-            var heightOfText: CGFloat = textField.text!.size(withAttributes: [NSAttributedStringKey.font: textField.font!]).height
+            var heightOfText: CGFloat = textField.text!.size(withAttributes: [NSAttributedString.Key.font: textField.font!]).height
             let heightOfFrame: CGFloat = textField.frame.size.height
             
             while ((widthOfFrame - 15) < widthOfText) || ((heightOfFrame - 10) < heightOfText) {
                 let fontSize: CGFloat = textField.font!.pointSize
                 textField.font = textField.font?.withSize(CGFloat(fontSize - 0.5))
-                widthOfText = (textField.text?.size(withAttributes: [NSAttributedStringKey.font: textField.font!]).width)!
-                heightOfText = (textField.text?.size(withAttributes: [NSAttributedStringKey.font: textField.font!]).height)!
+                widthOfText = (textField.text?.size(withAttributes: [NSAttributedString.Key.font: textField.font!]).width)!
+                heightOfText = (textField.text?.size(withAttributes: [NSAttributedString.Key.font: textField.font!]).height)!
             }
         }
     }
@@ -143,9 +143,9 @@ class MainContentsViewController: UIViewController, UITextFieldDelegate  {
     private func configureObserver() {
         
         let notification = NotificationCenter.default
-        notification.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        notification.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
-        notification.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        notification.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     /// Notificationを削除
@@ -165,7 +165,7 @@ class MainContentsViewController: UIViewController, UITextFieldDelegate  {
         
         // Keypadの上辺位置を取得
         let userInfo = notification?.userInfo!
-        let keyboardScreenEndFrame = (userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let keyboardScreenEndFrame = (userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let myBoundSize: CGSize = UIScreen.main.bounds.size
         let kbdLimit = (myBoundSize.height - keyboardScreenEndFrame.size.height)
 

@@ -44,8 +44,8 @@ class TradeTypePickerTextField: UITextField, UIPickerViewDelegate, UIPickerViewD
         toolBar.isTranslucent = true
         toolBar.tintColor = UIColor.black
         
-        let okButton   = UIBarButtonItem(title: "閉じる", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.donePressed))
-        let spaceButton  = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let okButton   = UIBarButtonItem(title: "閉じる", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.donePressed))
+        let spaceButton  = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         
         
         toolBar.setItems([spaceButton, okButton], animated: false)

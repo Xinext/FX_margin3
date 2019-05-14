@@ -92,9 +92,9 @@ class XIPaddingButton: UIButton {
         var area = CGSize.zero
         var font = UIFont()
         var fs = fontSize
-        var newAttributes = [NSAttributedStringKey : Any]()
+        var newAttributes = [NSAttributedString.Key : Any]()
         self.titleLabel!.attributedText?.enumerateAttributes(in: NSMakeRange(0, text!.count), options: .longestEffectiveRangeNotRequired, using: {
-            (attributes: [NSAttributedStringKey : Any], range: NSRange, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
+            (attributes: [NSAttributedString.Key : Any], range: NSRange, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
             newAttributes = attributes
         })
         if newAttributes.count == 0 {
@@ -102,7 +102,7 @@ class XIPaddingButton: UIButton {
         }
         while (true) {
             font = UIFont(name: fontName, size: fs)!
-            newAttributes[NSAttributedStringKey.font] = font
+            newAttributes[NSAttributedString.Key.font] = font
             
             if isOneLine {
                 boundingSize = CGSize(width: CGFloat(MAXFLOAT), height: size.height)

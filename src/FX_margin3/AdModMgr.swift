@@ -30,7 +30,7 @@ class AdModMgr: UIViewController, GADBannerViewDelegate {
     func InitManager(pvc: UIViewController, adView: UIView, hightLC: NSLayoutConstraint) {
 
         // Delegateを受け取るControllerを親ViewControllerへ登録
-        pvc.addChildViewController(self)
+        pvc.addChild(self)
         
         // AdMod初期設定
         m_ADBannerView.isHidden = true

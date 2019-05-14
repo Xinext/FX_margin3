@@ -92,8 +92,8 @@ class XINumberTextFieldWithToolbar: UITextField {
      */
     private func createBaseButtonItems(_ buttonArray: inout [UIBarButtonItem] ) {
         
-        let okButton   = UIBarButtonItem(title: "閉じる", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.okButtonPush))
-        let spaceButton  = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let okButton   = UIBarButtonItem(title: "閉じる", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.okButtonPush))
+        let spaceButton  = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         
         buttonArray.append(spaceButton)
         buttonArray.append(okButton)

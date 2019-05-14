@@ -61,18 +61,18 @@ class XIDialog {
         // Create action and added.
         // Cancel
         let cancelAction:UIAlertAction = UIAlertAction(title: NSLocalizedString("STR_CANCEL", comment: "Cancel"),
-                                                       style: UIAlertActionStyle.cancel,
+                                                       style: UIAlertAction.Style.cancel,
                                                        handler:{(action:UIAlertAction!) in cancelHandler!()
                                                         })
         
         // To Setting page
         let defaultAction:UIAlertAction = UIAlertAction(title: NSLocalizedString("STR_TO_SETTING_PAGE", comment: "To settings"),
-                                                        style: UIAlertActionStyle.default,
+                                                        style: UIAlertAction.Style.default,
                                                         handler:{
                                                             (action:UIAlertAction!) -> Void in
-                                                            let url = NSURL(string:UIApplicationOpenSettingsURLString)
+                                                            let url = NSURL(string:UIApplication.openSettingsURLString)
                                                             if #available(iOS 10.0, *) {
-                                                                UIApplication.shared.open(url! as URL,options: [:], completionHandler: nil )
+                                                                UIApplication.shared.open(url! as URL,options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil )
                                                             } else {
                                                                 UIApplication.shared.openURL(url! as URL)
                                                             }
@@ -281,4 +281,9 @@ extension Decimal {
         NSDecimalRound(&result, &value, scale, roundingMode)
         return result
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }
